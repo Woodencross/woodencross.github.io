@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://woodencross.github.io/sitemap.xml
