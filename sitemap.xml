@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://woodencross.github.io/tags/github/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/tags/hugo/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/posts/deploy-website-via-github-actions/deploy-website-via-github-actions/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/categories/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/posts/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
+    <loc>https://woodencross.github.io/tags/</loc>
+    <lastmod>2021-12-22T18:43:49+08:00</lastmod>
+  </url><url>
     <loc>https://woodencross.github.io/tags/linux/</loc>
     <lastmod>2021-12-22T10:53:20+08:00</lastmod>
   </url><url>
@@ -10,27 +34,6 @@
   </url><url>
     <loc>https://woodencross.github.io/tags/manjaro/</loc>
     <lastmod>2021-12-22T10:53:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/</loc>
-    <lastmod>2021-12-22T10:53:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/categories/</loc>
-    <lastmod>2021-12-22T10:53:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-12-22T10:53:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/posts/</loc>
-    <lastmod>2021-12-22T10:53:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/tags/</loc>
-    <lastmod>2021-12-22T10:53:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/tags/github/</loc>
-    <lastmod>2021-12-21T23:13:20+08:00</lastmod>
-  </url><url>
-    <loc>https://woodencross.github.io/tags/hugo/</loc>
-    <lastmod>2021-12-21T23:13:20+08:00</lastmod>
   </url><url>
     <loc>https://woodencross.github.io/posts/blog-building-record/blog-building-record/</loc>
     <lastmod>2021-12-21T23:13:20+08:00</lastmod>
