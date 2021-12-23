@@ -9,8 +9,7 @@
       <link>https://woodencross.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 22 Dec 2021 18:43:49 +0800</lastBuildDate><atom:link href="https://woodencross.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="https://woodencross.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>技术</title>
       <link>https://woodencross.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
