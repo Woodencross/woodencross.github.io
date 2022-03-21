@@ -9,7 +9,17 @@
       <link>https://woodencross.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://woodencross.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 21 Mar 2022 21:53:51 +0800</lastBuildDate><atom:link href="https://woodencross.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修改文章post_meta信息</title>
+      <link>https://woodencross.github.io/posts/modify-post-meta/</link>
+      <pubDate>Mon, 21 Mar 2022 21:53:51 +0800</pubDate>
+      
+      <guid>https://woodencross.github.io/posts/modify-post-meta/</guid>
+      <description>Little work</description>
+    </item>
+    
     <item>
       <title>Industrial Control System Security</title>
       <link>https://woodencross.github.io/posts/industrial-control-system/</link>
