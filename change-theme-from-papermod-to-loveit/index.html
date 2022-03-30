@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>切换主题——从PaperMod到LoveIt - Woodencross&#39;s Cyber Home</title><meta name="Description" content="QC的个人博客"><meta property="og:title" content="切换主题——从PaperMod到LoveIt" />
+<meta property="og:description" content="踩了点坑" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><meta property="og:image" content="https://woodencross.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-30T16:51:48+08:00" />
+<meta property="article:modified_time" content="2022-03-30T16:51:48+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://woodencross.github.io/logo.png"/>
+
+<meta name="twitter:title" content="切换主题——从PaperMod到LoveIt"/>
+<meta name="twitter:description" content="踩了点坑"/>
+<meta name="application-name" content="Woodencross&#39;s">
+<meta name="apple-mobile-web-app-title" content="Woodencross&#39;s"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><link rel="prev" href="https://woodencross.github.io/linux-ubuntu-record/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "切换主题——从PaperMod到LoveIt",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/"
+        },"genre": "posts","keywords": "Hugo, LoveIt, Waline","wordcount":  817 ,
+        "url": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/","datePublished": "2022-03-30T16:51:48+08:00","dateModified": "2022-03-30T16:51:48+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Woodencross"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Woodencross&#39;s Cyber Home"><span class="header-title-pre"><i class='fas fa-feather-alt'></i></span>Woodencross&#39;s</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Woodencross&#39;s Cyber Home"><span class="header-title-pre"><i class='fas fa-feather-alt'></i></span>Woodencross&#39;s</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">切换主题——从PaperMod到LoveIt</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Woodencross</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 817 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#换新">换新</a>
+      <ul>
+        <li><a href="#几个需要注意的点">几个需要注意的点</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>之前一直在用 <a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank" rel="noopener noreffer">PaperMod主题</a> ，但是最近拉取了一下更新，主页中 profile 模式对于头像的读取方式发生了点变化，一是不能使用外链只能用本地图像，二是图变糊了。对问题一可以修改 layout 文件解决，但是二真的搞不懂😕。</p>
+<p>于是乎，是时候打开新世界的大门了（指换主题）。</p>
+<h2 id="换新">换新</h2>
+<p><a href="https://hugoloveit.com/zh-cn/" target="_blank" rel="noopener noreffer">LoveIt主题</a> 是我早已中意的。它有简洁大方的布局，舒服的配色，合适的字体大小和间距。而且不得不提代码折叠和提醒框 shortcode ，真的是深深戳中我，可惜上篇文章刚准备介绍一个找到的提醒框代码，还没写好就夭折了😇。</p>
+<h3 id="几个需要注意的点">几个需要注意的点</h3>
+<ol>
+<li>要使用 admonition 等功能，需要 hugo extended 版本。</li>
+<li>fontawesome 需要用v5版的，v6试了一下无法引入。见 <a href="https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome" target="_blank" rel="noopener noreffer">fontawesome支持</a> 。</li>
+<li><code>tags</code> <code>categories</code> <code>posts</code> 用的是 <code>_index.md</code> ，但是 <code>about</code> 页面需要用 <code>index.md</code> ，不然会不渲染内容。</li>
+<li>评论系统默认不支持 waline ，如果使用需要修改模板文件 <code>comment.html</code> <code>single.html</code> 。具体做法为：
+<ol>
+<li>新建 <code>layouts/partials/comment.html</code> ，复制 <code>themes/LoveIt/layouts/partials/comment.html</code> 的内容，然后在 Valine 的部分后面加入：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{- /* Waline Comment System */ -}}
+</span></span><span class="line"><span class="cl">  {{- $waline := $comment.waline | default dict -}}
+</span></span><span class="line"><span class="cl">  {{- if $waline.enable -}}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;waline-container&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;comment&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $waline.cdn }}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="k">new</span> <span class="nx">Waline</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#waline-container&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">serverURL</span><span class="o">:</span> <span class="s1">&#39;{{ $waline.serverURL }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">dark</span><span class="o">:</span> <span class="s1">&#39;body[theme=&#34;dark&#34;]&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">visitor</span><span class="o">:</span> <span class="s1">&#39;{{ $waline.visitor }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">avatar</span><span class="o">:</span> <span class="s1">&#39;{{ $waline.avatar }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">emoji</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="p">],</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">login</span><span class="o">:</span> <span class="s1">&#39;{{ $waline.login }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">placeholder</span><span class="o">:</span> <span class="s1">&#39;{{ $waline.placeholder }}&#39;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">});</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">noscript</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          Please enable JavaScript to view the comments powered by <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://waline.js.org/&#34;</span><span class="p">&gt;</span>Waline<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">noscript</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{- end -}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">其中 <code>dark</code> 字段是针对 LoveIt 主题进行的设置，不同主题间可能不通用。</div>
+        </div>
+    </div></li>
+<li>在 <code>config.toml</code> 中，配置 waline：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># Waline 评论</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">comment</span><span class="p">.</span><span class="nx">waline</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cdn</span> <span class="p">=</span> <span class="s2">&#34;//cdn.jsdelivr.net/npm/@waline/client&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">serverURL</span> <span class="p">=</span> <span class="s2">&#34;your-serverURL&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">visitor</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 访问量统计</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">avatar</span> <span class="p">=</span> <span class="s2">&#34;retro&#34;</span> <span class="c"># 默认头像</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">login</span> <span class="p">=</span> <span class="s2">&#34;force&#34;</span> <span class="c"># 强制登陆后评论</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;登陆后才能评论哦~&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>此时访问量统计还没有真正生效。需要复制 <code>themes/LoveIt/layouts/posts/single.html</code> 到 <code>layouts/posts/single.html</code> 并修改，定位到：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{- if $comment.enable | and $comment.valine.enable | and $comment.valine.visitor -}}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;leancloud_visitors&#34;</span> <span class="na">data-flag-title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;far fa-eye fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">leancloud-visitors-count</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>{{ T &#34;views&#34; }}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>
+</span></span><span class="line"><span class="cl">  {{- end -}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div>在其后面添加：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{- if $comment.enable | and $comment.waline.enable | and $comment.waline.visitor -}}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;leancloud_visitors&#34;</span> <span class="na">data-flag-title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;far fa-eye fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">leancloud-visitors-count</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>{{ T &#34;views&#34; }}
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>
+</span></span><span class="line"><span class="cl">  {{- end -}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div>其实就是把 valine 改成 waline 啦。
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">waline 说 2.x 版本会移除对 <code>leancloud_visitors</code>的支持，需注意。</div>
+        </div>
+    </div></li>
+</ol>
+</li>
+<li>默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。这个是 Todo，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词😅。</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-30</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-hashtags="Hugo,LoveIt,Waline"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/loveit/">LoveIt</a>,&nbsp;<a href="/tags/waline/">Waline</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/linux-ubuntu-record/" class="prev" rel="prev" title="Linux &amp; Ubuntu 折腾记录"><i class="fas fa-angle-left fa-fw"></i>Linux &amp; Ubuntu 折腾记录</a></div>
+</div>
+<div id="comments"><div id="waline-container" class="comment"></div>
+                <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+                <script>
+                    new Waline({
+                    el: '#waline-container',
+                    serverURL: 'https:\/\/waline4myblog-897ihl1ou-woodencross.vercel.app\/',
+                    dark: 'body[theme="dark"]',
+                    visitor: 'true',
+                    avatar: 'retro',
+                    emoji: [
+                        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+                        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+                        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+                    ],
+                    login: 'force',
+                    placeholder: '登陆后才能评论哦~'
+                    });
+                </script>
+            <noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
