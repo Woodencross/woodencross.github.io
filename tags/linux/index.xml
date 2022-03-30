@@ -1,24 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Linux on Woodencross&#39;s Cyber Home</title>
-    <link>https://woodencross.github.io/tags/linux/</link>
-    <description>Recent content in Linux on Woodencross&#39;s Cyber Home</description>
-    <image>
-      <url>https://woodencross.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://woodencross.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Mar 2022 14:25:37 +0800</lastBuildDate><atom:link href="https://woodencross.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux &amp; Ubuntu 折腾记录</title>
-      <link>https://woodencross.github.io/posts/tech/linux-ubuntu-record/</link>
-      <pubDate>Fri, 25 Mar 2022 14:25:37 +0800</pubDate>
-      
-      <guid>https://woodencross.github.io/posts/tech/linux-ubuntu-record/</guid>
-      <description>Linux is free when your time is free</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linux - 标签 - Woodencross&#39;s Cyber Home</title>
+        <link>https://woodencross.github.io/tags/linux/</link>
+        <description>Linux - 标签 - Woodencross&#39;s Cyber Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 25 Mar 2022 14:25:37 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux &amp; Ubuntu 折腾记录</title>
+    <link>https://woodencross.github.io/linux-ubuntu-record/</link>
+    <pubDate>Fri, 25 Mar 2022 14:25:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://woodencross.github.io/linux-ubuntu-record/</guid>
+    <description><![CDATA[Linux is free when your time is free]]></description>
+</item></channel>
 </rss>

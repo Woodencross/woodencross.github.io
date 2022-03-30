@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>个人博客小站建设记录 - Woodencross&#39;s Cyber Home</title><meta name="Description" content="记录一下自己搭建个人博客的踩坑历程。"><meta property="og:title" content="个人博客小站建设记录" />
+<meta property="og:description" content="记录一下自己搭建个人博客的踩坑历程。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://woodencross.github.io/blog-building-record/" /><meta property="og:image" content="https://woodencross.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-21T23:13:20+08:00" />
+<meta property="article:modified_time" content="2021-12-21T23:13:20+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://woodencross.github.io/logo.png"/>
+
+<meta name="twitter:title" content="个人博客小站建设记录"/>
+<meta name="twitter:description" content="记录一下自己搭建个人博客的踩坑历程。"/>
+<meta name="application-name" content="Woodencross&#39;s">
+<meta name="apple-mobile-web-app-title" content="Woodencross&#39;s"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://woodencross.github.io/blog-building-record/" /><link rel="prev" href="https://woodencross.github.io/my-first-post/" /><link rel="next" href="https://woodencross.github.io/deploy-website-via-github-actions/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "个人博客小站建设记录",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/woodencross.github.io\/blog-building-record\/"
+        },"genre": "posts","keywords": "Hugo, Github, Disqus, Gitalk, Waline","wordcount":  3862 ,
+        "url": "https:\/\/woodencross.github.io\/blog-building-record\/","datePublished": "2021-12-21T23:13:20+08:00","dateModified": "2021-12-21T23:13:20+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Woodencross"
+            },"description": "记录一下自己搭建个人博客的踩坑历程。"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Woodencross&#39;s Cyber Home">Woodencross&#39;s</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Woodencross&#39;s Cyber Home">Woodencross&#39;s</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">个人博客小站建设记录</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Woodencross</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-21">2021-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3862 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么想建个人博客">为什么想建个人博客</a></li>
+    <li><a href="#hugogithub-pages">Hugo&amp;Github Pages</a></li>
+    <li><a href="#踩坑经历">踩坑经历</a>
+      <ul>
+        <li><a href="#框架问题">框架问题</a></li>
+        <li><a href="#图片插入问题">图片插入问题</a></li>
+        <li><a href="#代码高亮问题">代码高亮问题</a></li>
+        <li><a href="#搜索问题">搜索问题</a></li>
+        <li><a href="#分享按钮问题">分享按钮问题</a></li>
+        <li><a href="#评论问题">评论问题</a>
+          <ul>
+            <li><a href="#disqus">Disqus</a></li>
+            <li><a href="#gitalk">Gitalk</a></li>
+            <li><a href="#waline">Waline</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="为什么想建个人博客">为什么想建个人博客</h2>
+<p>一个重要的原因是因为想有一个地方可以自己记录一些东西，而各种现成的平台一是觉得自定义程度不够高，二是内容又会经过层层审核甚至被夹掉，所以到最后就选择了自建一个博客小站。看着小站在自己手中逐渐完善，就好像自己逐渐装修起来一个精致舒适的小屋一样，会真正有一种“属于我”的归属感，这也是这个小站叫做“Woodencross&rsquo;s Cyber <strong>Home</strong>”的原因。寄蜉蝣于天地，渺沧海之一粟，希望这个小站能够成为QC在赛博空间里的“锚”。</p>
+<p>当然还有一个原因是忙完前一段突然得了点闲，就想折腾了😅。</p>
+<h2 id="hugogithub-pages">Hugo&amp;Github Pages</h2>
+<p>自建博客当然要先选择一个框架啦，于是Google了一下目前主流的博客框架，再上Github看了一下⭐，Hugo的星最多，那么就决定是你了！</p>
+<p>至于Github Pages，白嫖嘛，多是一件美事啊。</p>
+<h2 id="踩坑经历">踩坑经历</h2>
+<h3 id="框架问题">框架问题</h3>
+<p><em>Todo: config.yaml与content/</em></p>
+<h3 id="图片插入问题">图片插入问题</h3>
+<p>由于编译静态网站后文件结构不同，因此在文章的<code>.md</code>中使用相对路径插入图片是行不通的，如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">posts
+</span></span><span class="line"><span class="cl">    |-article
+</span></span><span class="line"><span class="cl">        |-article.md
+</span></span><span class="line"><span class="cl">        |-img.png
+</span></span></code></pre></div><p>此时在<code>article.md</code>中使用<code>![](./img.png)</code>引用图片会404。</p>
+<p>那么正确的图片引用姿势有这几种：</p>
+<ol>
+<li>
+<p>使用图床，然后引用图片网址。这样的风险就是万一图床挂了或者网址变动就全完了。</p>
+</li>
+<li>
+<p>使用绝对路径。Hugo在构建静态网页时会将<code>content/</code>下的文件夹和<code>static</code>文件本身都拷贝到网址之下（应该是基于设定的<code>baseUrl</code>？），所以如果图片是这样放的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">posts
+</span></span><span class="line"><span class="cl">    |-article
+</span></span><span class="line"><span class="cl">        |-article.md
+</span></span><span class="line"><span class="cl">        |-img.png
+</span></span></code></pre></div><p>那么在<code>article.md</code>中可以使用<code>![](/post/article/img.png)</code>来引用图片。</p>
+<p>如果图片是这样放的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">static
+</span></span><span class="line"><span class="cl">    |-images
+</span></span><span class="line"><span class="cl">        |-img.png
+</span></span></code></pre></div><p>那么在<code>article.md</code>中可以使用<code>![](/images/img.png)</code>来引用图片。</p>
+</li>
+</ol>
+<p>不过在这个<del>动荡的</del>时代，资源还是自己掌握最好哇！说到这我又想起来以后自己搞一个家用NAS的Flag，想必又是一个大坑……</p>
+<p>顺便一提，如果要调整插入图片的位置和大小的话，markdown自身语法支持并不好，而使用html的话Hugo好像支持也不太完善，因此使用Hugo提供的Shortcodes是一个不错的选择，回头专开一章写一写（挖坑不填警告）。</p>
+<h3 id="代码高亮问题">代码高亮问题</h3>
+<p>Hugo提供了Shortcodes支持<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer">代码块高亮</a>，但是Shortcodes我还没搞明白……</p>
+<p>万幸的是，Hugo从v0.60.0开始支持如下写法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">    ```python {linenos=true, hl_lines=[1, &#34;15-17&#34;], linenostart=199}
+</span></span><span class="line"><span class="cl">    //code
+</span></span><span class="line"><span class="cl">    ```
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这种写法好像只有goldmark渲染器支持。解释一下大括号中的元素：</p>
+<ul>
+<li><code>linenos</code>：布尔值，是否显示行号。</li>
+<li><code>hl_lines</code>：需要高亮渲染的行号。</li>
+<li><code>linenostart</code>：行号开始显示的值。</li>
+</ul>
+<h3 id="搜索问题">搜索问题</h3>
+<p><a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page" target="_blank" rel="noopener noreffer">PaperMod主题内置了Fuse.js搜索功能</a>，首先需要在<code>config.yaml</code>加入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">outputs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">home</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">HTML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">RSS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">JSON</span><span class="w"> </span><span class="c"># is necessary</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>之后需要在<code>content/</code>下新建一个<code>search.md</code>（我的是<code>search/_index.md</code>），表示一个新页面，并添加如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Search&#34;</span><span class="w"> </span><span class="c"># in any language you want</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">layout</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;search&#34;</span><span class="w"> </span><span class="c"># is necessary</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># url: &#34;/archive&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># description: &#34;Description for Search&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;search&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中<code>layout: &quot;search&quot;</code>是必要的，它指定了要以“search”的页面结构来渲染这一页。</p>
+<p>其实主题作者基本把搜索都给弄好了，但是我一开始傻傻地把<code>.yaml</code>里要加代码的位置搞错了，把<code>outputs</code>加到了<code>param</code>参数下，人家应该在根下自成一个参数的。因此搜索不好使，我还把搜索页面的描述改成了“随时失灵……”。</p>
+<h3 id="分享按钮问题">分享按钮问题</h3>
+<p>一开始每篇文章最下面都会有一行分享按钮，我觉得不好看而且实用性不高（都是些Twitter、Facebook啥的），就想给它禁用掉。为此经历了三个阶段：</p>
+<ol>
+<li>在项目内搜索<code>twitter.com</code>，发现<code>themes/PaperMod/layouts/partials/share_icons.html</code>包含这一字段，于是新建<code>layouts/partials/share_icons.html</code>并置为空文件，这样可以覆盖主题里的对应文件。为防止误删我还特意写了一段注释（# 不要删除这段空循环否则后果自负.jpg）。</li>
+<li>可是马上我就发现，可以通过在文章<code>.md</code>的front matter（即前缀）中声明<code>disableShare: true</code>来禁用当前页面的分享按钮，于是我把第一步的空文件删掉，给目前的每篇文章都加上这个声明，并且给<code>archetypes/default.md</code>里也加了一下。这个文件是每次运行<code>Hugo new</code>新建文章时的模板，这样我的新文章也都能不显示分享了。</li>
+<li>一天后，我在翻阅<code>config.yaml</code>时发现一行
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>啊这，难道是【那个功能】！改成false试了一下果然……</li>
+</ol>
+<p>大概这就是“认识的波浪式前进与螺旋式上升吧”。</p>
+<h3 id="评论问题">评论问题</h3>
+<h4 id="disqus">Disqus</h4>
+<p>Hogo对评论的支持与主题有关。我用的PaperMod虽然没有内置主题，但是它留下了自定义的接口，既然有接口那可不能浪费了啊。</p>
+<p>首先按照PaperMod主题的<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#comments" target="_blank" rel="noopener noreffer">文档</a>新建一个<code>layouts/partials/comments.html</code>文件，还要修改<code>config.yaml</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着按照Hugo的<a href="https://gohugo.io/content-management/comments/" target="_blank" rel="noopener noreffer">文档</a>去注册一个Disqus账号获得disqus-short-name，这是什么呢？原来Disqus会对我登记的每一个站点生成一个<code>disqus-short-name.disqus.com</code>的管理页面，这个short name就是里面的三级域名，当然这是可以在登记网站时自定义的。</p>
+<p>获得short name之后，需要回<code>config.yaml</code>中把它记下来：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">disqusShortname</span><span class="p">:</span><span class="w"> </span><span class="l">disqus-short-name</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>之后再根据Hugo官方的<a href="https://gohugo.io/templates/internal/#disqus" target="_blank" rel="noopener noreffer">这个文档</a>，复制里面的<code>layouts/partials/disqus.html</code>到我前面创建的<code>comments.html</code>里（不能改名，这个文件会按名字在<code>layouts/_default/single.html</code>中被调用渲染），之后注释掉里面检测localhost的if语句，就可以本地调试看到评论区出现啦。</p>
+<p>PS：<code>disqus.html</code>的内容在Disqus的上手文档里也有提供，好像叫做Universal Code，两者大差不差，区别就是Hugo的代码调用了<code>.Site.DisqusShortname</code>来获取short name而Disqus的代码是直接把short name写在链接里了。</p>
+<p>为了防止评论出bug，我还配置了一下<code>disqus_identifier</code>和<code>disqus_url</code>，具体是在<code>comments.html</code>中<code>script</code>一开始加入代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">var disqus_config = function() {
+</span></span><span class="line"><span class="cl">    this.page.title = &#39;{{ .Title }}&#39;;
+</span></span><span class="line"><span class="cl">    this.page.url = &#39;{{ .Permalink }}&#39;;
+</span></span><span class="line"><span class="cl">    this.page.identifier = &#39;{{ .Permalink }}&#39;;
+</span></span><span class="line"><span class="cl">};
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>不过效果如何还有待验证，也可能就是个安慰剂，反正有备无患嘛。</p>
+<p>还有，Disqus默认的评论区总感觉有种湾湾风格不知道为啥……回头看看能不能美化一点，或者看别人用的<a href="https://waline.js.org/" target="_blank" rel="noopener noreffer">Waline</a>挺好看的说不定换一下。</p>
+<h4 id="gitalk">Gitalk</h4>
+<p>Push到网站上后才发现Disqus在国内被墙了，还是换一个吧……先试试Gitalk，这是一个基于Github issue的评论服务，正好可以使用网站的公开仓库issue存放评论，官方文档在<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener noreffer">这里</a>，但是对我来说写的不够傻瓜，于是又在别人的博客上找到了<a href="https://charmerkai.github.io/posts/2020-11/%E7%BB%99hugo%E5%8A%A0%E5%85%A5gitalk/" target="_blank" rel="noopener noreffer">这个</a>。</p>
+<p>设置步骤如下：</p>
+<ol>
+<li>在Github<code>Settings-&gt;Developer settings-&gt;OAuth Apps</code>中新建一个授权，其中<code>Homepage URL</code>和<code>Authorization callback URL</code>都填主页的地址，并记住生成的<code>clientID</code>和<code>clientSecret</code>。</li>
+<li>更改<code>comments.html</code>为
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;gitalk-container&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">const</span> <span class="nx">gitalk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gitalk</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">clientID</span><span class="o">:</span> <span class="s1">&#39;{{ .Site.Params.Gitalk.clientID }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">clientSecret</span><span class="o">:</span> <span class="s1">&#39;{{ .Site.Params.Gitalk.clientSecret }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">repo</span><span class="o">:</span> <span class="s1">&#39;{{ .Site.Params.Gitalk.repo }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">owner</span><span class="o">:</span> <span class="s1">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">admin</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">id</span><span class="o">:</span> <span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">,</span> <span class="c1">// Ensure uniqueness and length less than 50
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">distractionFreeMode</span><span class="o">:</span> <span class="kc">false</span> <span class="c1">// Facebook-like distraction free mode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">});</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">([</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hostname</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;gitalk-container&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Gitalk comments not available by default when the website is previewed locally.&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">gitalk</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;gitalk-container&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="p">})();</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>在<code>config.yaml</code>中加入相关参数：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w"> </span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="nt">Gitalk</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">clientID</span><span class="p">:</span><span class="w"> </span><span class="l">your clientID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">clientSecret</span><span class="p">:</span><span class="w"> </span><span class="l">your clientSecret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Woodencross.github.io&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Woodencross&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">admin</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Woodencross&#34;</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>并设置
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w"> </span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>设置好之后，本地调试的话需要把检测localhost的代码删掉。建议是push到网站上再调试，因为评论需要登陆Github账号。Gitalk会给每一篇文章新建一个issue来存放评论，初始化时需要身份为admin的用户打开文章评论区才会自动新建一个issue。</p>
+<p>效果如下：</p>
+<figure><img src="/images/screenshots/Gitalk%e4%ba%ae.png"/>
+</figure>
+
+<p>与主题契合的挺好！美中不足的就是在暗色模式下评论依旧是亮色，有些违和：</p>
+<figure><img src="/images/screenshots/Gitalk%e6%9a%97.png"/>
+</figure>
+
+<p>只能说还是不够好呀。</p>
+<h4 id="waline">Waline</h4>
+<blockquote>
+<p>同时 @waline/client 还带来了内置的暗黑模式支持。——Waline</p>
+</blockquote>
+<p>于是我又来折腾辣。官方手册<a href="https://waline.js.org/guide/get-started.html" target="_blank" rel="noopener noreffer">在此</a>，这个写的很傻瓜基本上照做就没啥问题。</p>
+<p>结束后我的<code>comments.html</code>是这样的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;//cdn.jsdelivr.net/npm/@waline/client&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;waline-container&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Waline</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#waline-container&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">serverURL</span><span class="o">:</span> <span class="s1">&#39;my server URL&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>但是在网站暗色模式下依旧是亮色</p>
+<figure><img src="/images/screenshots/Waline%e4%ba%ae.png"/>
+</figure>
+
+<p>于是来看手册：</p>
+<blockquote>
+<p>通常网站会通过两种方式启用暗黑模式支持:</p>
+<ul>
+<li>使用@media选择器通过prefers-color-scheme来根据设备颜色模式状态自动切换</li>
+<li>通过修改dom根元素(html或body)的属性与class来动态应用或取消暗黑模式的颜色样式。
+如果你在第一种方式的站点上启用Waline，你只需将dark设置为&rsquo;auto&rsquo;。
+对于第二种站点，你需要将dark设置为令暗黑模式生效的CSS选择器。</li>
+</ul>
+</blockquote>
+<p>首先尝试在Waline()中添加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">dark: &#39;auto&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>发现无效，说明我的网站应该是第二种情况，那就是说要填一个CSS选择器的名字？继续看手册的例子：</p>
+<blockquote>
+<p>vuepress-theme-hope: 它会在<code>&lt;body&gt;</code>上添加theme-dark class来开启暗黑模式。那么你需要将dark选项设置为body.theme-dark。</p>
+</blockquote>
+<p>在<code>&lt;body&gt;</code>上添加？依照我贫瘠的html知识的指引，我打开了f12开发者模式，并尝试切换主题：</p>
+<figure><img src="/images/screenshots/body%e4%ba%ae.png"
+         alt="亮色"/><figcaption>
+            <p>亮色</p>
+        </figcaption>
+</figure>
+
+<figure><img src="/images/screenshots/body%e6%9a%97.png"
+         alt="暗色"/><figcaption>
+            <p>暗色</p>
+        </figcaption>
+</figure>
+
+<p>我超，还真有。于是添加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">dark: &#39;body.dark&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><figure><img src="/images/screenshots/Waline%e6%9a%97.png"/>
+</figure>
+
+<p>大功告成！心里终于舒坦了~而且Waline还支持表情，感觉挺不赖，就先用着它了。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-12-21</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录" data-hashtags="Hugo,Github,Disqus,Gitalk,Waline"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/blog-building-record/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录" data-description="记录一下自己搭建个人博客的踩坑历程。"><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录" data-description="记录一下自己搭建个人博客的踩坑历程。"><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/blog-building-record/" data-title="个人博客小站建设记录"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/github/">Github</a>,&nbsp;<a href="/tags/disqus/">Disqus</a>,&nbsp;<a href="/tags/gitalk/">Gitalk</a>,&nbsp;<a href="/tags/waline/">Waline</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my-first-post/" class="prev" rel="prev" title="第一篇博客？"><i class="fas fa-angle-left fa-fw"></i>第一篇博客？</a>
+            <a href="/deploy-website-via-github-actions/" class="next" rel="next" title="使用Github Actions部署私有仓库静态博客到Github Pages">使用Github Actions部署私有仓库静态博客到Github Pages<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
