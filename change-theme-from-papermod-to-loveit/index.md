@@ -14,7 +14,7 @@
 ### 几个需要注意的点
 
 1. 要使用 admonition 等功能，需要 hugo extended 版本。
-2. fontawesome 需要用v5版的，v6试了一下无法引入。见 [fontawesome支持](https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome) 。
+2. fontawesome 需要用v5版的，v6试了一下无法引入。见 [fontawesome支持](https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome) 。更新：好像需要使用 `solid` 版本，待验证。
 3. `tags` `categories` `posts` 用的是 `_index.md` ，但是 `about` 页面需要用 `index.md` ，不然会不渲染内容。
 4. 评论系统默认不支持 waline ，如果使用需要修改模板文件 `comment.html` `single.html` 。具体做法为：
    1. 新建 `layouts/partials/comment.html` ，复制 `themes/LoveIt/layouts/partials/comment.html` 的内容，然后在 Valine 的部分后面加入：
