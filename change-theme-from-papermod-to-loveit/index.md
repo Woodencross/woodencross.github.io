@@ -99,8 +99,33 @@
    4. 同时在 `config.toml` 中设置搜索引擎为 `algolia` ，并填入 `appID` `index` `searchKey` （不一定必须，未测试）。
    5. 最后 push 你的代码，等待部署完成后就发现搜索变为 “Searched by Algolia” 啦！
 
+## 美化
+
+### favicon
+
+### header 字体
+
+LoveIt 主题默认的字体是黑体，整体效果很不错，但是我想让左上角 header 的字体更个性一点。
+
+{{< image src="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png" caption="就是这个" >}}
+
+于是查阅文档，说到：
+
+> 在 `assets/css/_override.scss` 中, 你可以覆盖 `themes/LoveIt/assets/css/_variables.scss` 中的变量以自定义样式.
+
+于是新建 `assets/css/_override.scss` ，编辑内容为：
+
+```scss
+$header-title-font-family: Lucida Handwriting;
+```
+
+此时再看 header：
+
+{{< image src="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png" caption="cooler" >}}
+
+:cool::+1:
+
 ## 后记
 
 至此新主题基本收拾好了，看着不错！
 
-以后再有调整就再单开文章说吧。

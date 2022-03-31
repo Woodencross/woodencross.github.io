@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/"
-        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1150 ,
+        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1250 ,
         "url": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/","datePublished": "2022-03-30T16:51:48+08:00","dateModified": "2022-03-31T20:04:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">切换主题——从PaperMod到LoveIt</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Woodencross</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1150 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1250 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -121,6 +121,12 @@
     <li><a href="#换新">换新</a>
       <ul>
         <li><a href="#几个需要注意的点">几个需要注意的点</a></li>
+      </ul>
+    </li>
+    <li><a href="#美化">美化</a>
+      <ul>
+        <li><a href="#favicon">favicon</a></li>
+        <li><a href="#header-字体">header 字体</a></li>
       </ul>
     </li>
     <li><a href="#后记">后记</a></li>
@@ -320,9 +326,47 @@
 </ol>
 </li>
 </ol>
+<h2 id="美化">美化</h2>
+<h3 id="favicon">favicon</h3>
+<h3 id="header-字体">header 字体</h3>
+<p>LoveIt 主题默认的字体是黑体，整体效果很不错，但是我想让左上角 header 的字体更个性一点。</p>
+<figure><a class="lightgallery" href="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png" title="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png" data-thumbnail="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png" data-sub-html="<h2>就是这个</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png"
+            data-srcset="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png, /images/Change-theme-from-PaperMod-to-LoveIt/fig1.png 1.5x, /images/Change-theme-from-PaperMod-to-LoveIt/fig1.png 2x"
+            data-sizes="auto"
+            alt="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png" />
+    </a><figcaption class="image-caption">就是这个</figcaption>
+    </figure>
+<p>于是查阅文档，说到：</p>
+<blockquote>
+<p>在 <code>assets/css/_override.scss</code> 中, 你可以覆盖 <code>themes/LoveIt/assets/css/_variables.scss</code> 中的变量以自定义样式.</p>
+</blockquote>
+<p>于是新建 <code>assets/css/_override.scss</code> ，编辑内容为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$header-title-font-family</span><span class="o">:</span> <span class="n">Lucida</span> <span class="n">Handwriting</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时再看 header：</p>
+<figure><a class="lightgallery" href="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png" title="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png" data-thumbnail="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png" data-sub-html="<h2>cooler</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png"
+            data-srcset="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png, /images/Change-theme-from-PaperMod-to-LoveIt/fig2.png 1.5x, /images/Change-theme-from-PaperMod-to-LoveIt/fig2.png 2x"
+            data-sizes="auto"
+            alt="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png" />
+    </a><figcaption class="image-caption">cooler</figcaption>
+    </figure>
+<p>🆒👍</p>
 <h2 id="后记">后记</h2>
 <p>至此新主题基本收拾好了，看着不错！</p>
-<p>以后再有调整就再单开文章说吧。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
