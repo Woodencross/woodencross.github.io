@@ -10,7 +10,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><meta property="og:image" content="https://woodencross.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-30T16:51:48+08:00" />
-<meta property="article:modified_time" content="2022-03-30T16:51:48+08:00" />
+<meta property="article:modified_time" content="2022-03-31T20:04:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://woodencross.github.io/logo.png"/>
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/"
-        },"genre": "posts","keywords": "Hugo, LoveIt, Waline","wordcount":  834 ,
-        "url": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/","datePublished": "2022-03-30T16:51:48+08:00","dateModified": "2022-03-30T16:51:48+08:00","publisher": {
+        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1150 ,
+        "url": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/","datePublished": "2022-03-30T16:51:48+08:00","dateModified": "2022-03-31T20:04:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">切换主题——从PaperMod到LoveIt</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Woodencross</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 834 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1150 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -123,6 +123,7 @@
         <li><a href="#几个需要注意的点">几个需要注意的点</a></li>
       </ul>
     </li>
+    <li><a href="#后记">后记</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="前言">前言</h2>
@@ -132,10 +133,17 @@
 <p><a href="https://hugoloveit.com/zh-cn/" target="_blank" rel="noopener noreffer">LoveIt主题</a> 是我早已中意的。它有简洁大方的布局，舒服的配色，合适的字体大小和间距。而且不得不提代码折叠和提醒框 shortcode ，真的是深深戳中我，可惜上篇文章刚准备介绍一个找到的提醒框代码，还没写好就夭折了😇。</p>
 <h3 id="几个需要注意的点">几个需要注意的点</h3>
 <ol>
-<li>要使用 admonition 等功能，需要 hugo extended 版本。</li>
-<li>fontawesome 需要用v5版的，v6试了一下无法引入。见 <a href="https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome" target="_blank" rel="noopener noreffer">fontawesome支持</a> 。更新：好像需要使用 <code>solid</code> 版本，待验证。</li>
-<li><code>tags</code> <code>categories</code> <code>posts</code> 用的是 <code>_index.md</code> ，但是 <code>about</code> 页面需要用 <code>index.md</code> ，不然会不渲染内容。</li>
-<li>评论系统默认不支持 waline ，如果使用需要修改模板文件 <code>comment.html</code> <code>single.html</code> 。具体做法为：
+<li>
+<p>要使用 admonition 等功能，需要 hugo extended 版本。</p>
+</li>
+<li>
+<p>fontawesome 需要用v5版的，v6试了一下无法引入。见 <a href="https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome" target="_blank" rel="noopener noreffer">fontawesome支持</a> 。更新：好像需要使用 <code>solid</code> 版本，待验证。</p>
+</li>
+<li>
+<p><code>tags</code> <code>categories</code> <code>posts</code> 用的是 <code>_index.md</code> ，但是 <code>about</code> 页面需要用 <code>index.md</code> ，不然会不渲染内容。</p>
+</li>
+<li>
+<p>评论系统默认不支持 waline ，如果使用需要修改模板文件 <code>comment.html</code> <code>single.html</code> 。具体做法为：</p>
 <ol>
 <li>新建 <code>layouts/partials/comment.html</code> ，复制 <code>themes/LoveIt/layouts/partials/comment.html</code> 的内容，然后在 Valine 的部分后面加入：
 <div class="highlight"><div class="chroma">
@@ -273,26 +281,66 @@
     </div></li>
 </ol>
 </li>
-<li>默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。这个是 Todo，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词😅。</li>
+<li>
+<p>默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。<del>这个是 Todo</del>，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词😅。</p>
+<p><a href="https://lucas-0.github.io/2020-06-30-hugo-and-loveit/#%E9%85%8D%E7%BD%AE-algolia" target="_blank" rel="noopener noreffer">这篇文章</a>介绍了在 github action 中配置 algolia 搜索的方法，借鉴一下。</p>
+<ol>
+<li>首先，注册一个 algolia 账号，并创建一个 <code>Index</code>。</li>
+<li>其次，在 <code>overview--&gt;API Keys</code> 中记住三个 Key。</li>
+<li>然后在 <code>.github/warkflows/gh-pages.yaml</code> 中添加：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Update Algolia Index</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ALGOLIA_APP_ID</span><span class="p">:</span><span class="w">     </span><span class="c"># 填写相应内容</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ALGOLIA_ADMIN_KEY</span><span class="p">:</span><span class="w">  </span><span class="c"># 填写相应内容</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ALGOLIA_INDEX_NAME</span><span class="p">:</span><span class="w"> </span><span class="c"># 填写相应内容</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ALGOLIA_INDEX_FILE</span><span class="p">:</span><span class="w"> </span><span class="c"># 填写相应内容</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    sudo apt-get -yqq install npm
+</span></span></span><span class="line"><span class="cl"><span class="sd">    sudo npm install atomic-algolia -g
+</span></span></span><span class="line"><span class="cl"><span class="sd">    atomic-algolia          </span><span class="w">    
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>关于配置 github actions 自动部署，可以参考我的<a href="https://woodencross.github.io/deploy-website-via-github-actions/" target="_blank" rel="noopener noreffer">这篇文章</a>。</li>
+<li>同时在 <code>config.toml</code> 中设置搜索引擎为 <code>algolia</code> ，并填入 <code>appID</code> <code>index</code> <code>searchKey</code> （不一定必须，未测试）。</li>
+<li>最后 push 你的代码，等待部署完成后就发现搜索变为 “Searched by Algolia” 啦！</li>
 </ol>
+</li>
+</ol>
+<h2 id="后记">后记</h2>
+<p>至此新主题基本收拾好了，看着不错！</p>
+<p>以后再有调整就再单开文章说吧。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-03-30</span>
+                <span>更新于 2022-03-31</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-hashtags="Hugo,LoveIt,Waline"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-hashtags="Hugo,LoveIt,Waline,Algolia"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/loveit/">LoveIt</a>,&nbsp;<a href="/tags/waline/">Waline</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/loveit/">LoveIt</a>,&nbsp;<a href="/tags/waline/">Waline</a>,&nbsp;<a href="/tags/algolia/">Algolia</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

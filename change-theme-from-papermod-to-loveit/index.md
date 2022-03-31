@@ -77,4 +77,30 @@
       ```
       其实就是把 valine 改成 waline 啦。
       {{< admonition warning >}}waline 说 2.x 版本会移除对 `leancloud_visitors`的支持，需注意。{{< /admonition >}}
-5. 默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。这个是 Todo，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词:sweat_smile:。
+5. 默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。~~这个是 Todo~~，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词:sweat_smile:。
+
+   [这篇文章](https://lucas-0.github.io/2020-06-30-hugo-and-loveit/#%E9%85%8D%E7%BD%AE-algolia)介绍了在 github action 中配置 algolia 搜索的方法，借鉴一下。
+   1. 首先，注册一个 algolia 账号，并创建一个 `Index`。
+   2. 其次，在 `overview-->API Keys` 中记住三个 Key。
+   3. 然后在 `.github/warkflows/gh-pages.yaml` 中添加：
+      ```yaml
+      - name: Update Algolia Index
+        env:
+          ALGOLIA_APP_ID:     # 填写相应内容
+          ALGOLIA_ADMIN_KEY:  # 填写相应内容
+          ALGOLIA_INDEX_NAME: # 填写相应内容
+          ALGOLIA_INDEX_FILE: # 填写相应内容
+        run: |
+          sudo apt-get -yqq install npm
+          sudo npm install atomic-algolia -g
+          atomic-algolia          
+      ```
+      关于配置 github actions 自动部署，可以参考我的[这篇文章](https://woodencross.github.io/deploy-website-via-github-actions/)。
+   4. 同时在 `config.toml` 中设置搜索引擎为 `algolia` ，并填入 `appID` `index` `searchKey` （不一定必须，未测试）。
+   5. 最后 push 你的代码，等待部署完成后就发现搜索变为 “Searched by Algolia” 啦！
+
+## 后记
+
+至此新主题基本收拾好了，看着不错！
+
+以后再有调整就再单开文章说吧。
