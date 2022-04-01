@@ -40,7 +40,7 @@ posts
             |-article.md
             |-img.png
     ```
-    那么在`article.md`中可以使用`![](/post/article/img.png)`来引用图片。
+    那么在`article.md`中可以使用`![](/posts/article/img.png)`来引用图片。
 
     如果图片是这样放的：
     ```plaintext {linenos=false}
@@ -97,6 +97,7 @@ summary: "search"
 ### 分享按钮问题
 
 一开始每篇文章最下面都会有一行分享按钮，我觉得不好看而且实用性不高（都是些Twitter、Facebook啥的），就想给它禁用掉。为此经历了三个阶段：
+
 1. 在项目内搜索`twitter.com`，发现`themes/PaperMod/layouts/partials/share_icons.html`包含这一字段，于是新建`layouts/partials/share_icons.html`并置为空文件，这样可以覆盖主题里的对应文件。为防止误删我还特意写了一段注释（# 不要删除这段空循环否则后果自负.jpg）。
 2. 可是马上我就发现，可以通过在文章`.md`的front matter（即前缀）中声明`disableShare: true`来禁用当前页面的分享按钮，于是我把第一步的空文件删掉，给目前的每篇文章都加上这个声明，并且给`archetypes/default.md`里也加了一下。这个文件是每次运行`Hugo new`新建文章时的模板，这样我的新文章也都能不显示分享了。
 3. 一天后，我在翻阅`config.yaml`时发现一行
@@ -190,11 +191,15 @@ Push到网站上后才发现Disqus在国内被墙了，还是换一个吧……�
 
 效果如下：
 
-{{< figure src="/images/screenshots/Gitalk亮.png" align="center" >}}
+{{< style "text-align:center" >}}
+{{< image src="./Gitalk亮.png" width=60% >}}
+{{< /style >}}
 
 与主题契合的挺好！美中不足的就是在暗色模式下评论依旧是亮色，有些违和：
 
-{{< figure src="/images/screenshots/Gitalk暗.png" align="center" >}}
+{{< style "text-align:center" >}}
+{{< image src="./Gitalk暗.png" width=60% >}}
+{{< /style >}}
 
 只能说还是不够好呀。
 
@@ -217,7 +222,9 @@ Push到网站上后才发现Disqus在国内被墙了，还是换一个吧……�
 ```
 但是在网站暗色模式下依旧是亮色
 
-{{< figure src="/images/screenshots/Waline亮.png" align="center" >}}
+{{< style "text-align:center" >}}
+{{< image src="./Waline亮.png" width=60% >}}
+{{< /style >}}
 
 于是来看手册：
 
@@ -237,15 +244,21 @@ dark: 'auto'
 
 在`<body>`上添加？依照我贫瘠的html知识的指引，我打开了f12开发者模式，并尝试切换主题：
 
-{{< figure src="/images/screenshots/body亮.png" caption="亮色" align="center" >}}
+{{< style "text-align:center" >}}
+{{< image src="./body亮.png" caption="亮色主题" width=60% >}}
+{{< /style >}}
 
-{{< figure src="/images/screenshots/body暗.png" caption="暗色" align="center" >}}
+{{< style "text-align:center" >}}
+{{< image src="./body暗.png" caption="暗色主题" width=60% >}}
+{{< /style >}}
 
 我超，还真有。于是添加
 ```html
 dark: 'body.dark'
 ```
 
-{{< figure src="/images/screenshots/Waline暗.png" align="center" >}}
+{{< style "text-align:center" >}}
+{{< image src="./Waline暗.png" width=60% >}}
+{{< /style >}}
 
 大功告成！心里终于舒坦了~而且Waline还支持表情，感觉挺不赖，就先用着它了。

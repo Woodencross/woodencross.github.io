@@ -103,11 +103,17 @@
 
 ### favicon
 
+使用 [realfavicongenerator](https://realfavicongenerator.net/) 来生成 favicon ，下载压缩包后放到 `/static` 目录下即可，这样 hugo 生成后这些图标会在网站根目录下。
+
+{{< admonition tip >}}
+修改完 favicon 后请重启浏览器刷新缓存后再观看效果。
+{{< /admonition >}}
+
 ### header 字体
 
 LoveIt 主题默认的字体是黑体，整体效果很不错，但是我想让左上角 header 的字体更个性一点。
 
-{{< image src="/images/Change-theme-from-PaperMod-to-LoveIt/fig1.png" caption="就是这个" >}}
+{{< image src="./fig1.png" caption="就是这个" >}}
 
 于是查阅文档，说到：
 
@@ -121,9 +127,37 @@ $header-title-font-family: Lucida Handwriting;
 
 此时再看 header：
 
-{{< image src="/images/Change-theme-from-PaperMod-to-LoveIt/fig2.png" caption="cooler" >}}
+{{< image src="./fig2.png" caption="cooler" >}}
 
 :cool::+1:
+
+### 图片相关
+
+后来想了一下，还是决定把图片从 `static` 目录迁移到各文章自己的目录下。一开始放在 `static` 里的原因是考虑到图片可能会有复用的需求，经过这一段时间来看，本身写文章的频率就不高，一篇文章又附不了几张图，还是放在各文章的目录下方便管理和引用。
+
+顺便，LoveIt 主题提供了 `image` shortcode 来插入图片，相比 `figure` 来说有以下优点：
+
+1. 图片标题为浅色显示，与内容更为融洽。
+2. 可以点开查看大图。
+3. 支持画廊模式，该功能由 `config.toml` 中 `params.page.lightgallery` 控制是否启用，也可以在文章前置参数中单独设置。
+4. 可以给图片设置链接。
+
+但是 `image` 默认无法接收位置参数，~~使得图片都是左对齐，这在文章中不甚美观~~ 。为了使图片居中对齐，我们要用到 `style` shortcode：
+
+```html
+{{</* style "text-align:center" */>}}
+{{</* image src="" */>}}
+{{</* /style */>}}
+```
+这样图片就能居中对齐啦。
+
+{{< admonition bug >}}
+`image` 的左对齐现象触发原因不明，除了 `style` 方法外，观察到为图片添加 `caption` 字段也可以使其居中对齐。
+{{< /admonition >}}
+
+{{< admonition info >}}
+`image` `style` shortcode 均需要 hugo extended 版本。
+{{< /admonition >}}
 
 ## 后记
 
