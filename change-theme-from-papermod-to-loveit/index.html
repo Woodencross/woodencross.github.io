@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/"
-        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1679 ,
+        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1772 ,
         "url": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/","datePublished": "2022-03-30T16:51:48+08:00","dateModified": "2022-04-01T11:59:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">切换主题——从PaperMod到LoveIt</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Woodencross</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1679 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1772 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -358,9 +358,11 @@
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$header-title-font-family</span><span class="o">:</span> <span class="n">Lucida</span> <span class="n">Handwriting</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$header-title-font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>此时再看 header：</p>
@@ -375,6 +377,38 @@
     </a><figcaption class="image-caption">cooler</figcaption>
     </figure>
 <p>🆒👍</p>
+<p>同时你也可以使用 <a href="https://fonts.google.com/" target="_blank" rel="noopener noreffer">google fonts</a> 的 API 来引入字体，比如在 <code>assets/css/_override.scss</code> 中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@import</span> <span class="sx">url(&#39;https://fonts.googleapis.com/css2?family=Rock+Salt&amp;display=swap&#39;)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$header-title-font-family</span><span class="o">:</span> <span class="n">Rock</span> <span class="n">Salt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$header-title-font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示效果为：</p>
+<figure><a class="lightgallery" href="./fig3.png" title="./fig3.png" data-thumbnail="./fig3.png" data-sub-html="<h2>also cooler</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./fig3.png"
+            data-srcset="./fig3.png, ./fig3.png 1.5x, ./fig3.png 2x"
+            data-sizes="auto"
+            alt="./fig3.png" />
+    </a><figcaption class="image-caption">also cooler</figcaption>
+    </figure>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>信息<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">使用 API 引入字体可以使其跨平台显示，否则如手机端本地没有这个字体，则还是会以默认字体显示。</div>
+        </div>
+    </div>
 <h3 id="图片相关">图片相关</h3>
 <p>后来想了一下，还是决定把图片从 <code>static</code> 目录迁移到各文章自己的目录下。一开始放在 <code>static</code> 里的原因是考虑到图片可能会有复用的需求，经过这一段时间来看，本身写文章的频率就不高，一篇文章又附不了几张图，还是放在各文章的目录下方便管理和引用。</p>
 <p>顺便，LoveIt 主题提供了 <code>image</code> shortcode 来插入图片，相比 <code>figure</code> 来说有以下优点：</p>

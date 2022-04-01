@@ -5,7 +5,7 @@
 
 >计划周更博客，给自己一个deadline可能更有动力。
 
-{{< style "text-align:right; font-family:Lucida Handwriting;" >}}
+{{< style "text-align:right; font-family:Rock Salt;" >}}
 To be continued ...
 {{< /style >}}
 

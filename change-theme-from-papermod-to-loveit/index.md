@@ -123,6 +123,7 @@ LoveIt 主题默认的字体是黑体，整体效果很不错，但是我想让�
 
 ```scss
 $header-title-font-family: Lucida Handwriting;
+$header-title-font-size: 1.5rem;
 ```
 
 此时再看 header：
@@ -130,6 +131,22 @@ $header-title-font-family: Lucida Handwriting;
 {{< image src="./fig2.png" caption="cooler" >}}
 
 :cool::+1:
+
+同时你也可以使用 [google fonts](https://fonts.google.com/) 的 API 来引入字体，比如在 `assets/css/_override.scss` 中：
+
+```scss
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+$header-title-font-family: Rock Salt;
+$header-title-font-size: 1.5rem;
+```
+
+显示效果为：
+
+{{< image src="./fig3.png" caption="also cooler" >}}
+
+{{< admonition info >}}
+使用 API 引入字体可以使其跨平台显示，否则如手机端本地没有这个字体，则还是会以默认字体显示。
+{{< /admonition >}}
 
 ### 图片相关
 
