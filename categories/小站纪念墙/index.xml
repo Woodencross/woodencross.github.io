@@ -11,6 +11,13 @@
     <guid>https://woodencross.github.io/change-theme-from-papermod-to-loveit/</guid>
     <description><![CDATA[踩了点坑]]></description>
 </item><item>
+    <title>个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo</title>
+    <link>https://woodencross.github.io/figure-bed/</link>
+    <pubDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://woodencross.github.io/figure-bed/</guid>
+    <description><![CDATA[从零开始]]></description>
+</item><item>
     <title>更改一下博客目录结构与字体</title>
     <link>https://woodencross.github.io/change-directory-and-font/</link>
     <pubDate>Tue, 22 Mar 2022 15:37:58 &#43;0800</pubDate>
@@ -31,7 +38,7 @@
     <author>作者</author>
     <guid>https://woodencross.github.io/deploy-website-via-github-actions/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/efishenci.png" referrerpolicy="no-referrer">
+                <img src="http://img.woodencross.cn/blog/deploy-website-via-github-actions/efishenci.png" referrerpolicy="no-referrer">
             </div>真是一个充实的下午。]]></description>
 </item><item>
     <title>个人博客小站建设记录</title>

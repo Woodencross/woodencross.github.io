@@ -113,7 +113,7 @@
 
 LoveIt 主题默认的字体是黑体，整体效果很不错，但是我想让左上角 header 的字体更个性一点。
 
-{{< image src="./fig1.png" caption="就是这个" >}}
+{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/fig1.png" caption="就是这个" >}}
 
 于是查阅文档，说到：
 
@@ -128,7 +128,7 @@ $header-title-font-size: 1.5rem;
 
 此时再看 header：
 
-{{< image src="./fig2.png" caption="cooler" >}}
+{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/fig2.png" caption="cooler" >}}
 
 :cool::+1:
 
@@ -142,7 +142,7 @@ $header-title-font-size: 1.5rem;
 
 显示效果为：
 
-{{< image src="./fig3.png" caption="also cooler" >}}
+{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/fig3.png" caption="also cooler" >}}
 
 {{< admonition info >}}
 使用 API 引入字体可以使其跨平台显示，否则如手机端本地没有这个字体，则还是会以默认字体显示。
