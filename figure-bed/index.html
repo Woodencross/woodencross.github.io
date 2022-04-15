@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/woodencross.github.io\/figure-bed\/"
-        },"genre": "posts","keywords": "图床","wordcount":  1310 ,
+        },"genre": "posts","keywords": "图床","wordcount":  1387 ,
         "url": "https:\/\/woodencross.github.io\/figure-bed\/","datePublished": "2022-03-29T14:02:02+08:00","dateModified": "2022-04-02T18:10:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Woodencross</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-29">2022-03-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1310 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-29">2022-03-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1387 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/figure-bed/" class="leancloud_visitors" data-flag-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -148,14 +148,14 @@
 </ol>
 <h3 id="开始搭建">开始搭建</h3>
 <p>首先需要新建一个对象存储实例。访问控制选择公开，否则无法通过链接访问图片。地区我选择了华东。</p>
-<figure><a class="lightgallery" href="http://img.woodencross.cn/blog/figure-bed/pic1.png" title="http://img.woodencross.cn/blog/figure-bed/pic1.png" data-thumbnail="http://img.woodencross.cn/blog/figure-bed/pic1.png" data-sub-html="<h2>公开访问控制</h2>">
+<figure><a class="lightgallery" href="./pic1.png" title="./pic1.png" data-thumbnail="./pic1.png" data-sub-html="<h2>公开访问控制</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="http://img.woodencross.cn/blog/figure-bed/pic1.png"
-            data-srcset="http://img.woodencross.cn/blog/figure-bed/pic1.png, http://img.woodencross.cn/blog/figure-bed/pic1.png 1.5x, http://img.woodencross.cn/blog/figure-bed/pic1.png 2x"
+            data-src="./pic1.png"
+            data-srcset="./pic1.png, ./pic1.png 1.5x, ./pic1.png 2x"
             data-sizes="auto"
-            alt="http://img.woodencross.cn/blog/figure-bed/pic1.png" width="60%" />
+            alt="./pic1.png" width="60%" />
     </a><figcaption class="image-caption">公开访问控制</figcaption>
     </figure>
 <div class="details admonition bug open">
@@ -167,39 +167,39 @@
         </div>
     </div>
 <p>之后绑定域名。在 <code>域名管理--&gt;自定义 CDN 加速域名</code> ，选择绑定域名，这里可以写已备案域名的二级域名，别的设置都默认即可。</p>
-<figure><a class="lightgallery" href="http://img.woodencross.cn/blog/figure-bed/pic2.png" title="http://img.woodencross.cn/blog/figure-bed/pic2.png" data-thumbnail="http://img.woodencross.cn/blog/figure-bed/pic2.png" data-sub-html="<h2>绑定域名</h2>">
+<figure><a class="lightgallery" href="./pic2.png" title="./pic2.png" data-thumbnail="./pic2.png" data-sub-html="<h2>绑定域名</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="http://img.woodencross.cn/blog/figure-bed/pic2.png"
-            data-srcset="http://img.woodencross.cn/blog/figure-bed/pic2.png, http://img.woodencross.cn/blog/figure-bed/pic2.png 1.5x, http://img.woodencross.cn/blog/figure-bed/pic2.png 2x"
+            data-src="./pic2.png"
+            data-srcset="./pic2.png, ./pic2.png 1.5x, ./pic2.png 2x"
             data-sizes="auto"
-            alt="http://img.woodencross.cn/blog/figure-bed/pic2.png" width="60%" />
+            alt="./pic2.png" width="60%" />
     </a><figcaption class="image-caption">绑定域名</figcaption>
     </figure>
 <p>最下面的 <code>缓存配置</code> ，使用推荐配置即可。</p>
 <p>设置好后，你会拿到一个 CNAME 字段，复制下来。之后去你的域名控制台里添加一条解析记录，记录类型 <code>CNAME</code> ，主机记录写二级域名，记录值粘贴七牛云生成的 CNAME 即可。</p>
-<figure><a class="lightgallery" href="http://img.woodencross.cn/blog/figure-bed/pic3.png" title="http://img.woodencross.cn/blog/figure-bed/pic3.png" data-thumbnail="http://img.woodencross.cn/blog/figure-bed/pic3.png" data-sub-html="<h2>解析域名</h2>">
+<figure><a class="lightgallery" href="./pic3.png" title="./pic3.png" data-thumbnail="./pic3.png" data-sub-html="<h2>解析域名</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="http://img.woodencross.cn/blog/figure-bed/pic3.png"
-            data-srcset="http://img.woodencross.cn/blog/figure-bed/pic3.png, http://img.woodencross.cn/blog/figure-bed/pic3.png 1.5x, http://img.woodencross.cn/blog/figure-bed/pic3.png 2x"
+            data-src="./pic3.png"
+            data-srcset="./pic3.png, ./pic3.png 1.5x, ./pic3.png 2x"
             data-sizes="auto"
-            alt="http://img.woodencross.cn/blog/figure-bed/pic3.png" width="60%" />
+            alt="./pic3.png" width="60%" />
     </a><figcaption class="image-caption">解析域名</figcaption>
     </figure>
 <p>回到七牛云控制台，稍作等待，看到域名状态成功，然后你就可以使用你的域名 <code>http://img.xxxx.com/img1.png</code> 来随意访问图片啦。</p>
 <h3 id="上传图片到图床">上传图片到图床</h3>
 <p><a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener noreffer">picgo</a> 是一款方便的图床上传工具。</p>
-<figure><a class="lightgallery" href="http://img.woodencross.cn/blog/figure-bed/pic4.png" title="http://img.woodencross.cn/blog/figure-bed/pic4.png" data-thumbnail="http://img.woodencross.cn/blog/figure-bed/pic4.png" data-sub-html="<h2>picgo 设置</h2>">
+<figure><a class="lightgallery" href="./pic4.png" title="./pic4.png" data-thumbnail="./pic4.png" data-sub-html="<h2>picgo 设置</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="http://img.woodencross.cn/blog/figure-bed/pic4.png"
-            data-srcset="http://img.woodencross.cn/blog/figure-bed/pic4.png, http://img.woodencross.cn/blog/figure-bed/pic4.png 1.5x, http://img.woodencross.cn/blog/figure-bed/pic4.png 2x"
+            data-src="./pic4.png"
+            data-srcset="./pic4.png, ./pic4.png 1.5x, ./pic4.png 2x"
             data-sizes="auto"
-            alt="http://img.woodencross.cn/blog/figure-bed/pic4.png" width="60%" />
+            alt="./pic4.png" width="60%" />
     </a><figcaption class="image-caption">picgo 设置</figcaption>
     </figure>
 <ul>
@@ -270,6 +270,16 @@
 <li>全过程中的决速步骤：备案。</li>
 <li>今后写博客可以放肆地放图了😋。</li>
 </ol>
+<div class="details admonition failure open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-times-circle fa-fw"></i>失败<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>好吧，hugo 站点拉取图片好像用的是 https ，但是七牛云免费流量不包括 https ，这就导致图片无法正常显示，成了一个链接。</p>
+<p>我还是先老实把图片和博客放在一个仓库吧。😢</p>
+</div>
+        </div>
+    </div>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -326,7 +336,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.97.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp">浙ICP备2022009921号</span></div>
         </div>

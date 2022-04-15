@@ -31,7 +31,7 @@ $$ \lim\limits_{文章 \rightarrow \infty} 文章图片 \rightarrow \infty $$
 
 首先需要新建一个对象存储实例。访问控制选择公开，否则无法通过链接访问图片。地区我选择了华东。
 
-{{< image src="http://img.woodencross.cn/blog/figure-bed/pic1.png" caption="公开访问控制" width=60% >}}
+{{< image src="./pic1.png" caption="公开访问控制" width=60% >}}
 
 {{< admonition bug >}}
 这里地区选择 `华东-浙江2` 的话，会由于区域代码的问题，导致后面 picgo 上传失败，这是一个 picgo 的 bug ，见 [GitHub issue](https://github.com/Molunerfinn/PicGo/issues/863) 。
@@ -39,13 +39,13 @@ $$ \lim\limits_{文章 \rightarrow \infty} 文章图片 \rightarrow \infty $$
 
 之后绑定域名。在 `域名管理-->自定义 CDN 加速域名` ，选择绑定域名，这里可以写已备案域名的二级域名，别的设置都默认即可。
 
-{{< image src="http://img.woodencross.cn/blog/figure-bed/pic2.png" caption="绑定域名" width=60% >}}
+{{< image src="./pic2.png" caption="绑定域名" width=60% >}}
 
 最下面的 `缓存配置` ，使用推荐配置即可。
 
 设置好后，你会拿到一个 CNAME 字段，复制下来。之后去你的域名控制台里添加一条解析记录，记录类型 `CNAME` ，主机记录写二级域名，记录值粘贴七牛云生成的 CNAME 即可。
 
-{{< image src="http://img.woodencross.cn/blog/figure-bed/pic3.png" caption="解析域名" width=60% >}}
+{{< image src="./pic3.png" caption="解析域名" width=60% >}}
 
 回到七牛云控制台，稍作等待，看到域名状态成功，然后你就可以使用你的域名 `http://img.xxxx.com/img1.png` 来随意访问图片啦。
 
@@ -53,7 +53,7 @@ $$ \lim\limits_{文章 \rightarrow \infty} 文章图片 \rightarrow \infty $$
 
 [picgo](https://picgo.github.io/PicGo-Doc/zh/) 是一款方便的图床上传工具。
 
-{{< image src="http://img.woodencross.cn/blog/figure-bed/pic4.png" caption="picgo 设置" width=60% >}}
+{{< image src="./pic4.png" caption="picgo 设置" width=60% >}}
 
 - AccessKey / SecretKey 可以在七牛云 `密钥管理` 中找到。
 - 存储空间名就写你刚创建的的实例名。
@@ -101,3 +101,9 @@ visualstudio2019buildtools 16.11.11.0
 
 1. 全过程中的决速步骤：备案。
 2. 今后写博客可以放肆地放图了:yum:。
+
+{{< admonition failure >}}
+好吧，hugo 站点拉取图片好像用的是 https ，但是七牛云免费流量不包括 https ，这就导致图片无法正常显示，成了一个链接。
+
+我还是先老实把图片和博客放在一个仓库吧。:cry:
+{{< /admonition >}}

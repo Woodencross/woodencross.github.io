@@ -44,7 +44,7 @@ menu:
 
 这次暂且先将二级目录分为三类，分别是生活相关的**生活小窝**、技术相关的**技术图书馆**，还有建站专题**博客历史馆**。国有国史，站有站史，这很合理（有点赛博过家家的感觉了）。重排好的目录如图。
 
-{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/img1.png" caption="目录" width=40% >}}
+{{< image src="./img1.png" caption="目录" width=40% >}}
 
 要注意每个二级目录下都要有一个`_index.md`，例如`/life`下的：
 ```yaml
@@ -67,10 +67,10 @@ body{
 ```
 修改为仿宋字体，目前感觉更好看点。
 
-{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/黑体1.png" caption="原来的" width=60% >}}
+{{< image src="./黑体1.png" caption="原来的" width=60% >}}
 
-{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/仿宋1.png" caption="现在的" width=60% >}}
+{{< image src="./仿宋1.png" caption="现在的" width=60% >}}
 
-{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/黑体2.png" caption="原来的" width=60% >}}
+{{< image src="./黑体2.png" caption="原来的" width=60% >}}
 
-{{< image src="http://img.woodencross.cn/blog/change-directory-and-font/仿宋2.png" caption="现在的" width=60% >}}
+{{< image src="./仿宋2.png" caption="现在的" width=60% >}}
