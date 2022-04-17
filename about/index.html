@@ -108,26 +108,19 @@
 <p>计划周更博客，给自己一个deadline可能更有动力。</p>
 </blockquote>
 <div id="id-1">To be continued &hellip;</div>
-</div><div id="comments"><div id="waline-container" class="comment"></div>
-                <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-                <script>
-                    new Waline({
-                    el: '#waline-container',
-                    serverURL: 'https:\/\/waline4myblog-f0neu6zsd-woodencross.vercel.app\/',
-                    dark: 'body[theme="dark"]',
-                    visitor: 'true',
-                    avatar: 'retro',
-                    emoji: [
-                        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
-                        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
-                        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
-                    ],
-                    login: 'force',
-                    placeholder: '登陆后才能评论哦~'
-                    });
-                </script>
+</div><div id="comments"><div id="twikoo-container" class="comment"></div>
+            <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js"></script>
+            <script>
+                twikoo.init({
+                  envId: 'https:\/\/twikoo4myblog.vercel.app', 
+                  el: '#twikoo-container', 
+                  
+                  
+                  lang: 'zh-CN', 
+                })
+            </script>
             <noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.97.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
