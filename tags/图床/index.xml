@@ -6,9 +6,9 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/tags/%E5%9B%BE%E5%BA%8A/" rel="self" type="application/rss+xml" /><item>
     <title>个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo</title>
     <link>https://woodencross.github.io/figure-bed/</link>
-    <pubDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/figure-bed/</guid>
+    <pubDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/figure-bed/</guid>
     <description><![CDATA[从零开始]]></description>
 </item></channel>
 </rss>

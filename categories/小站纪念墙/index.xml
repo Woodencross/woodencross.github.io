@@ -6,46 +6,46 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/" rel="self" type="application/rss+xml" /><item>
     <title>切换主题——从PaperMod到LoveIt</title>
     <link>https://woodencross.github.io/change-theme-from-papermod-to-loveit/</link>
-    <pubDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/change-theme-from-papermod-to-loveit/</guid>
+    <pubDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/change-theme-from-papermod-to-loveit/</guid>
     <description><![CDATA[踩了点坑]]></description>
 </item><item>
     <title>个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo</title>
     <link>https://woodencross.github.io/figure-bed/</link>
-    <pubDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/figure-bed/</guid>
+    <pubDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/figure-bed/</guid>
     <description><![CDATA[从零开始]]></description>
 </item><item>
     <title>更改一下博客目录结构与字体</title>
     <link>https://woodencross.github.io/change-directory-and-font/</link>
-    <pubDate>Tue, 22 Mar 2022 15:37:58 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/change-directory-and-font/</guid>
+    <pubDate>Tue, 22 Mar 2022 15:37:58 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/change-directory-and-font/</guid>
     <description><![CDATA[感觉好看了点~]]></description>
 </item><item>
     <title>修改文章post_meta信息</title>
     <link>https://woodencross.github.io/modify-post-meta/</link>
-    <pubDate>Mon, 21 Mar 2022 21:53:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/modify-post-meta/</guid>
+    <pubDate>Mon, 21 Mar 2022 21:53:51 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/modify-post-meta/</guid>
     <description><![CDATA[Little work]]></description>
 </item><item>
     <title>使用Github Actions部署私有仓库静态博客到Github Pages</title>
     <link>https://woodencross.github.io/deploy-website-via-github-actions/</link>
-    <pubDate>Wed, 22 Dec 2021 18:43:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/deploy-website-via-github-actions/</guid>
+    <pubDate>Wed, 22 Dec 2021 18:43:49 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/deploy-website-via-github-actions/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/efishenci.png" referrerpolicy="no-referrer">
             </div>真是一个充实的下午。]]></description>
 </item><item>
     <title>个人博客小站建设记录</title>
     <link>https://woodencross.github.io/blog-building-record/</link>
-    <pubDate>Tue, 21 Dec 2021 23:13:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://woodencross.github.io/blog-building-record/</guid>
+    <pubDate>Tue, 21 Dec 2021 23:13:20 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/blog-building-record/</guid>
     <description><![CDATA[记录一下自己搭建个人博客的踩坑历程。]]></description>
 </item></channel>
 </rss>
