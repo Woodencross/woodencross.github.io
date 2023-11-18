@@ -2,37 +2,37 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://woodencross.github.io/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/categories/%E8%82%A5%E5%AE%85%E5%BF%AB%E4%B9%90%E5%B1%8B/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/%E5%8E%9F%E7%A5%9E/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/genshin-artifacts-dogfood-route/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/algolia/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/hugo/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/loveit/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/waline/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/change-theme-from-papermod-to-loveit/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/figure-bed/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/linux/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/linux-ubuntu-record/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/tags/ubuntu/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E4%B9%A6%E9%A6%86/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/enhanced-vaccine/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%AA%9D/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/change-directory-and-font/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/modify-post-meta/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/tags/github/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/deploy-website-via-github-actions/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/disqus/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/gitalk/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/blog-building-record/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/tags/%E7%AC%AC%E4%B8%80/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/my-first-post/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://woodencross.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%8F%A8%E5%8F%A8/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://woodencross.github.io/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/categories/%E8%82%A5%E5%AE%85%E5%BF%AB%E4%B9%90%E5%B1%8B/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/%E5%8E%9F%E7%A5%9E/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/genshin-artifacts-dogfood-route/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/algolia/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/hugo/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/loveit/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/waline/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/change-theme-from-papermod-to-loveit/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/figure-bed/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc><lastmod>2022-04-17T16:14:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/linux/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/linux-ubuntu-record/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/ubuntu/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E4%B9%A6%E9%A6%86/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/enhanced-vaccine/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%AA%9D/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/change-directory-and-font/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/modify-post-meta/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/github/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/deploy-website-via-github-actions/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/disqus/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/gitalk/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/blog-building-record/</loc><lastmod>2022-04-15T20:19:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/tags/%E7%AC%AC%E4%B8%80/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/my-first-post/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%8F%A8%E5%8F%A8/</loc><lastmod>2022-04-01T19:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://woodencross.github.io/authors/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://woodencross.github.io/series/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://woodencross.github.io/tags/</loc><lastmod>2021-12-22T18:26:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://woodencross.github.io/categories/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/about/</loc><lastmod>2022-04-19T08:03:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://woodencross.github.io/posts/</loc><lastmod>2022-03-30T16:11:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
+            <loc>https://woodencross.github.io/categories/</loc><lastmod>2022-04-18T16:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/about/</loc><lastmod>2022-04-19T08:03:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://woodencross.github.io/posts/</loc><lastmod>2022-03-30T16:11:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

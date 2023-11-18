@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -5,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo - Woodencross&#39;s Cyber Home</title><meta name="Description" content="QC 的个人博客"><meta property="og:title" content="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" />
+    <title>个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo - Woodencross&#39;s Cyber Home</title><meta name="Description" content="QC 的个人博客"><meta property="og:title" content="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" />
 <meta property="og:description" content="从零开始" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://woodencross.github.io/figure-bed/" /><meta property="og:image" content="https://woodencross.github.io/logo.png"/><meta property="article:section" content="posts" />
@@ -22,7 +24,8 @@
 
 <meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://woodencross.github.io/figure-bed/" /><link rel="prev" href="https://woodencross.github.io/linux-ubuntu-record/" /><link rel="next" href="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://woodencross.github.io/figure-bed/" /><link rel="prev" href="https://woodencross.github.io/linux-ubuntu-record/" /><link rel="next" href="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -33,7 +36,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/woodencross.github.io\/figure-bed\/"
-        },"genre": "posts","keywords": "图床","wordcount":  1391 ,
+        },"genre": "posts","keywords": "图床","wordcount":  1402 ,
         "url": "https:\/\/woodencross.github.io\/figure-bed\/","datePublished": "2022-03-29T14:02:02+08:00","dateModified": "2022-04-17T16:14:08+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -44,12 +47,13 @@
     </script></head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
         function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
         function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
         if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
         let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
     </script>
     <div id="back-to-top"></div>
     <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
@@ -60,16 +64,16 @@
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-book-open'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fas fa-boxes'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fas fa-question'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a></div>
         </div>
@@ -87,20 +91,20 @@
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-boxes'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-boxes'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -127,13 +131,12 @@
     <li><a href="#后记">后记</a></li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo</h1><div class="post-meta">
             <div class="post-meta-line">
-                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Woodencross</a>
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">Woodencross</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-29">2022-03-29</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1391 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/figure-bed/" class="leancloud_visitors" data-flag-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count id=twikoo_visitors></span>&nbsp;次阅读
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-29">2022-03-29</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1402 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/figure-bed/" class="leancloud_visitors" data-flag-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id="twikoo_visitors"></span>&nbsp;次阅读
                     </span>&nbsp;<span id="/figure-bed/" class="comment_count" data-flag-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo">
                         <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
@@ -155,17 +158,25 @@
     <li><a href="#后记">后记</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="为什么要建立图床" class="headerLink">
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2022-04-17T16:14:08" title="April 17, 2022">2022-04-17</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h2 id="为什么要建立图床" class="headerLink">
     <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%bb%ba%e7%ab%8b%e5%9b%be%e5%ba%8a" class="header-mark"></a>为什么要建立图床</h2><p>考虑：</p>
 <p>$$ \lim\limits_{文章 \rightarrow \infty} 文章图片 \rightarrow \infty $$</p>
-<p>所以把图片单独存放在图床里是很有远见的行为（🤔）<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<p>所以把图片单独存放在图床里是很有远见的行为（&#x1f914;）<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
 <h2 id="图床建立过程" class="headerLink">
     <a href="#%e5%9b%be%e5%ba%8a%e5%bb%ba%e7%ab%8b%e8%bf%87%e7%a8%8b" class="header-mark"></a>图床建立过程</h2><h3 id="准备" class="headerLink">
     <a href="#%e5%87%86%e5%a4%87" class="header-mark"></a>准备</h3><p>建立图床需要准备两样东西：</p>
 <ol>
 <li>
 <p>购买一个域名，需要实名认证并进行 ICP 备案。我买了个阿里云的域名，备案时被告知需要阿里云服务器的备案服务码，否则无法备案。可是我并没有使用服务器的需要啊？无奈，某宝 2 元买了一个服务码。</p>
-<p>然后就是填写信息，网站名称写了个人文件存储，注意名称里不能有关键字（”博客“也是关键字😅）。服务类型选了文件服务，之后提交阿里云初审。我大概是下午三四点提交的初审，六点多的时候就接到了阿里云的电话，告知我网站名称需要再加点英文或数字，我说那帮我加个123吧，之后就提交工信部审核了。</p>
+<p>然后就是填写信息，网站名称写了个人文件存储，注意名称里不能有关键字（”博客“也是关键字&#x1f605;）。服务类型选了文件服务，之后提交阿里云初审。我大概是下午三四点提交的初审，六点多的时候就接到了阿里云的电话，告知我网站名称需要再加点英文或数字，我说那帮我加个123吧，之后就提交工信部审核了。</p>
 <p>第二天上午九点多，收到了审批通过的短信和备案号。总的来说还挺快的。</p>
 <p>然后进入阿里云 ICP 备案界面可以看到备案成功，同时提醒你进行公安备案（但是单做图床使用的话好像不必须公安备案）。</p>
 </li>
@@ -177,11 +188,12 @@
     <a href="#%e5%bc%80%e5%a7%8b%e6%90%ad%e5%bb%ba" class="header-mark"></a>开始搭建</h3><p>首先需要新建一个对象存储实例。访问控制选择公开，否则无法通过链接访问图片。地区我选择了华东。</p>
 <figure><a class="lightgallery" href="./pic1.png" title="./pic1.png" data-thumbnail="./pic1.png" data-sub-html="<h2>公开访问控制</h2>">
         <img
-            class="lazyload"
-            data-src="./pic1.png"
-            data-srcset="./pic1.png, ./pic1.png 1.5x, ./pic1.png 2x"
-            data-sizes="auto"
-            alt="./pic1.png"width="60%">
+            
+            loading="lazy"
+            src="./pic1.png"
+            srcset="./pic1.png, ./pic1.png 1.5x, ./pic1.png 2x"
+            sizes="auto"
+            alt="./pic1.png" width="60%" >
     </a><figcaption class="image-caption">公开访问控制</figcaption>
     </figure>
 <div class="details admonition bug open">
@@ -189,50 +201,53 @@
             <i class="icon fas fa-bug fa-fw"></i>Bug<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">这里地区选择 <code>华东-浙江2</code> 的话，会由于区域代码的问题，导致后面 picgo 上传失败，这是一个 picgo 的 bug ，见 <a href="https://github.com/Molunerfinn/PicGo/issues/863" target="_blank" rel="noopener noreffer">GitHub issue</a> 。</div>
+            <div class="admonition-content">这里地区选择 <code>华东-浙江2</code> 的话，会由于区域代码的问题，导致后面 picgo 上传失败，这是一个 picgo 的 bug ，见 <a href="https://github.com/Molunerfinn/PicGo/issues/863" target="_blank" rel="noopener noreferrer">GitHub issue</a> 。</div>
         </div>
     </div>
 <p>之后绑定域名。在 <code>域名管理--&gt;自定义 CDN 加速域名</code> ，选择绑定域名，这里可以写已备案域名的二级域名，别的设置都默认即可。</p>
 <figure><a class="lightgallery" href="./pic2.png" title="./pic2.png" data-thumbnail="./pic2.png" data-sub-html="<h2>绑定域名</h2>">
         <img
-            class="lazyload"
-            data-src="./pic2.png"
-            data-srcset="./pic2.png, ./pic2.png 1.5x, ./pic2.png 2x"
-            data-sizes="auto"
-            alt="./pic2.png"width="60%">
+            
+            loading="lazy"
+            src="./pic2.png"
+            srcset="./pic2.png, ./pic2.png 1.5x, ./pic2.png 2x"
+            sizes="auto"
+            alt="./pic2.png" width="60%" >
     </a><figcaption class="image-caption">绑定域名</figcaption>
     </figure>
 <p>最下面的 <code>缓存配置</code> ，使用推荐配置即可。</p>
 <p>设置好后，你会拿到一个 CNAME 字段，复制下来。之后去你的域名控制台里添加一条解析记录，记录类型 <code>CNAME</code> ，主机记录写二级域名，记录值粘贴七牛云生成的 CNAME 即可。</p>
 <figure><a class="lightgallery" href="./pic3.png" title="./pic3.png" data-thumbnail="./pic3.png" data-sub-html="<h2>解析域名</h2>">
         <img
-            class="lazyload"
-            data-src="./pic3.png"
-            data-srcset="./pic3.png, ./pic3.png 1.5x, ./pic3.png 2x"
-            data-sizes="auto"
-            alt="./pic3.png"width="60%">
+            
+            loading="lazy"
+            src="./pic3.png"
+            srcset="./pic3.png, ./pic3.png 1.5x, ./pic3.png 2x"
+            sizes="auto"
+            alt="./pic3.png" width="60%" >
     </a><figcaption class="image-caption">解析域名</figcaption>
     </figure>
 <p>回到七牛云控制台，稍作等待，看到域名状态成功，然后你就可以使用你的域名 <code>http://img.xxxx.com/img1.png</code> 来随意访问图片啦。</p>
 <h3 id="上传图片到图床" class="headerLink">
-    <a href="#%e4%b8%8a%e4%bc%a0%e5%9b%be%e7%89%87%e5%88%b0%e5%9b%be%e5%ba%8a" class="header-mark"></a>上传图片到图床</h3><p><a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener noreffer">picgo</a> 是一款方便的图床上传工具。</p>
+    <a href="#%e4%b8%8a%e4%bc%a0%e5%9b%be%e7%89%87%e5%88%b0%e5%9b%be%e5%ba%8a" class="header-mark"></a>上传图片到图床</h3><p><a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener noreferrer">picgo</a> 是一款方便的图床上传工具。</p>
 <figure><a class="lightgallery" href="./pic4.png" title="./pic4.png" data-thumbnail="./pic4.png" data-sub-html="<h2>picgo 设置</h2>">
         <img
-            class="lazyload"
-            data-src="./pic4.png"
-            data-srcset="./pic4.png, ./pic4.png 1.5x, ./pic4.png 2x"
-            data-sizes="auto"
-            alt="./pic4.png"width="60%">
+            
+            loading="lazy"
+            src="./pic4.png"
+            srcset="./pic4.png, ./pic4.png 1.5x, ./pic4.png 2x"
+            sizes="auto"
+            alt="./pic4.png" width="60%" >
     </a><figcaption class="image-caption">picgo 设置</figcaption>
     </figure>
 <ul>
 <li>AccessKey / SecretKey 可以在七牛云 <code>密钥管理</code> 中找到。</li>
 <li>存储空间名就写你刚创建的的实例名。</li>
 <li>访问网址写刚绑定的加速域名，注意添加 <code>http://</code> 。</li>
-<li><a href="https://developer.qiniu.com/kodo/1671/region-endpoint-fq" target="_blank" rel="noopener noreffer">存储区域代码</a>。</li>
+<li><a href="https://developer.qiniu.com/kodo/1671/region-endpoint-fq" target="_blank" rel="noopener noreferrer">存储区域代码</a>。</li>
 </ul>
 <hr>
-<p>就我个人而言，我希望在上传图片前先对其压缩，这样可以节省很多空间和流量。你既可以在本地手动压缩后再上传，又可以使用 picgo 插件 <a href="https://github.com/JuZiSang/picgo-plugin-compress" target="_blank" rel="noopener noreffer">picgo-plugin-compress</a> 。</p>
+<p>就我个人而言，我希望在上传图片前先对其压缩，这样可以节省很多空间和流量。你既可以在本地手动压缩后再上传，又可以使用 picgo 插件 <a href="https://github.com/JuZiSang/picgo-plugin-compress" target="_blank" rel="noopener noreferrer">picgo-plugin-compress</a> 。</p>
 <p>安装此插件需要先安装 node.js ，python 以及 vs c++ build tool 。这些都可以在安装 node.js 时勾选 <code>安装额外构建工具</code> 来安装，如果你已经安装了 node.js ，那么可以在电脑应用列表里找到 <code>Install Additional Tools for Node.js</code> ，运行它即可。</p>
 <p>我之前因为作业需要已经安装了 python (miniconda) ，于是我想卸载 node 为我装的 python 。使用管理员身份运行 powershell ，列出本地包：</p>
 <div class="highlight"><div class="chroma">
@@ -291,7 +306,7 @@
 <h2 id="后记" class="headerLink">
     <a href="#%e5%90%8e%e8%ae%b0" class="header-mark"></a>后记</h2><ol>
 <li>全过程中的决速步骤：备案。</li>
-<li>今后写博客可以放肆地放图了😋。</li>
+<li>今后写博客可以放肆地放图了&#x1f60b;。</li>
 </ol>
 <div class="details admonition failure open">
         <div class="details-summary admonition-title">
@@ -299,18 +314,18 @@
         </div>
         <div class="details-content">
             <div class="admonition-content"><p>好吧，hugo 站点拉取图片好像用的是 https ，但是七牛云免费流量不包括 https ，这就导致图片无法正常显示，成了一个链接。</p>
-<p>我还是先老实把图片和博客放在一个仓库吧。😢</p>
+<p>我还是先老实把图片和博客放在一个仓库吧。&#x1f622;</p>
 </div>
         </div>
     </div>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>按一张图 100K 算，我要发一万张图才能破 1G ，whatever。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 </div>
 
         <div class="post-footer" id="post-footer">
@@ -325,9 +340,7 @@
         <div class="post-info-line">
             <div class="post-info-md"><span><a class="link-to-mardown" href=/figure-bed/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
-            <div class="post-info-share">
-                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-hashtags="图床"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/figure-bed/" data-hashtag="图床"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo"><i class="fab fa-evernote fa-fw"></i></a></span>
-            </div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-hashtags="图床"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/figure-bed/" data-hashtag="图床"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-web><span class="fab fa-whatsapp fa-fw"></span></button><button title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo"><span data-svg-src="/lib/simple-icons/icons/line.min.svg"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-description=""><span data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></span></button><button title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo" data-description=""><span class="fab fa-blogger fa-fw"></span></button><button title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/figure-bed/" data-title="个人图床搭建历程——阿里云域名&#43;七牛云对象存储&#43;picgo"><span class="fab fa-evernote fa-fw"></span></button></div>
         </div>
     </div>
 
@@ -346,8 +359,8 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.97.3">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.120.4">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp">浙ICP备2022009921号</span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
@@ -359,10 +372,8 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
-
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo4myblog.vercel.app","lang":"zh-cn"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"ICWETR37BB","algoliaIndex":"search4myblog","algoliaSearchKey":"269392727bc9819a6112575098d99b30","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo4myblog.vercel.app","lang":"zh-cn"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"ICWETR37BB","algoliaIndex":"search4myblog","algoliaSearchKey":"269392727bc9819a6112575098d99b30","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script></div>
 </body>
 
 </html>

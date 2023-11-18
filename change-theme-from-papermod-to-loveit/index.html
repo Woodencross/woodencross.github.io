@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -5,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">切换主题——从PaperMod到LoveIt - Woodencross&#39;s Cyber Home</title><meta name="Description" content="QC 的个人博客"><meta property="og:title" content="切换主题——从PaperMod到LoveIt" />
+    <title>切换主题——从PaperMod到LoveIt - Woodencross&#39;s Cyber Home</title><meta name="Description" content="QC 的个人博客"><meta property="og:title" content="切换主题——从PaperMod到LoveIt" />
 <meta property="og:description" content="踩了点坑" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><meta property="og:image" content="https://woodencross.github.io/logo.png"/><meta property="article:section" content="posts" />
@@ -22,7 +24,8 @@
 
 <meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><link rel="prev" href="https://woodencross.github.io/figure-bed/" /><link rel="next" href="https://woodencross.github.io/genshin-artifacts-dogfood-route/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" /><link rel="prev" href="https://woodencross.github.io/figure-bed/" /><link rel="next" href="https://woodencross.github.io/genshin-artifacts-dogfood-route/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -33,7 +36,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/"
-        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1783 ,
+        },"genre": "posts","keywords": "Hugo, LoveIt, Waline, Algolia","wordcount":  1743 ,
         "url": "https:\/\/woodencross.github.io\/change-theme-from-papermod-to-loveit\/","datePublished": "2022-03-30T16:51:48+08:00","dateModified": "2022-04-18T16:34:23+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -44,12 +47,13 @@
     </script></head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
         function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
         function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
         if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
         let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
     </script>
     <div id="back-to-top"></div>
     <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
@@ -60,16 +64,16 @@
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-book-open'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fas fa-boxes'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fas fa-question'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a></div>
         </div>
@@ -87,20 +91,20 @@
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-boxes'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-boxes'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -132,13 +136,12 @@
     <li><a href="#后记">后记</a></li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">切换主题——从PaperMod到LoveIt</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">切换主题——从PaperMod到LoveIt</h1><div class="post-meta">
             <div class="post-meta-line">
-                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Woodencross</a>
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">Woodencross</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-04-18">2022-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1783 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count id=twikoo_visitors></span>&nbsp;次阅读
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-30">2022-03-30</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-04-18">2022-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1743 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="leancloud_visitors" data-flag-title="切换主题——从PaperMod到LoveIt">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id="twikoo_visitors"></span>&nbsp;次阅读
                     </span>&nbsp;<span id="/change-theme-from-papermod-to-loveit/" class="comment_count" data-flag-title="切换主题——从PaperMod到LoveIt">
                         <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
@@ -165,18 +168,26 @@
     <li><a href="#后记">后记</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="前言" class="headerLink">
-    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>之前一直在用 <a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank" rel="noopener noreffer">PaperMod主题</a> ，但是最近拉取了一下更新，主页中 profile 模式对于头像的读取方式发生了点变化，一是不能使用外链只能用本地图像，二是图变糊了。对问题一可以修改 layout 文件解决，但是二真的搞不懂😕。</p>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2022-04-18T16:34:23" title="April 18, 2022">2022-04-18</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>之前一直在用 <a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank" rel="noopener noreferrer">PaperMod主题</a> ，但是最近拉取了一下更新，主页中 profile 模式对于头像的读取方式发生了点变化，一是不能使用外链只能用本地图像，二是图变糊了。对问题一可以修改 layout 文件解决，但是二真的搞不懂&#x1f615;。</p>
 <p>于是乎，是时候打开新世界的大门了（指换主题）。</p>
 <h2 id="换新" class="headerLink">
-    <a href="#%e6%8d%a2%e6%96%b0" class="header-mark"></a>换新</h2><p><a href="https://hugoloveit.com/zh-cn/" target="_blank" rel="noopener noreffer">LoveIt主题</a> 是我早已中意的。它有简洁大方的布局，舒服的配色，合适的字体大小和间距。而且不得不提代码折叠和提醒框 shortcode ，真的是深深戳中我，可惜上篇文章刚准备介绍一个找到的提醒框代码，还没写好就夭折了😇。</p>
+    <a href="#%e6%8d%a2%e6%96%b0" class="header-mark"></a>换新</h2><p><a href="https://hugoloveit.com/zh-cn/" target="_blank" rel="noopener noreferrer">LoveIt主题</a> 是我早已中意的。它有简洁大方的布局，舒服的配色，合适的字体大小和间距。而且不得不提代码折叠和提醒框 shortcode ，真的是深深戳中我，可惜上篇文章刚准备介绍一个找到的提醒框代码，还没写好就夭折了&#x1f607;。</p>
 <h3 id="几个需要注意的点" class="headerLink">
     <a href="#%e5%87%a0%e4%b8%aa%e9%9c%80%e8%a6%81%e6%b3%a8%e6%84%8f%e7%9a%84%e7%82%b9" class="header-mark"></a>几个需要注意的点</h3><ol>
 <li>
 <p>要使用 admonition 等功能，需要 hugo extended 版本。</p>
 </li>
 <li>
-<p>fontawesome 需要用v5版的，v6试了一下无法引入。见 <a href="https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome" target="_blank" rel="noopener noreffer">fontawesome支持</a> 。更新：好像需要使用 <code>solid</code> 版本，待验证。</p>
+<p>fontawesome 需要用v5版的，v6试了一下无法引入。见 <a href="https://hugoloveit.com/zh-cn/theme-documentation-content/#fontawesome" target="_blank" rel="noopener noreferrer">fontawesome支持</a> 。更新：好像需要使用 <code>solid</code> 版本，待验证。</p>
 </li>
 <li>
 <p><code>tags</code> <code>categories</code> <code>posts</code> 用的是 <code>_index.md</code> ，但是 <code>about</code> 页面需要用 <code>index.md</code> ，不然会不渲染内容。</p>
@@ -321,8 +332,8 @@
 </ol>
 </li>
 <li>
-<p>默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。<del>这个是 Todo</del>，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词😅。</p>
-<p><a href="https://lucas-0.github.io/2020-06-30-hugo-and-loveit/#%E9%85%8D%E7%BD%AE-algolia" target="_blank" rel="noopener noreffer">这篇文章</a>介绍了在 github action 中配置 algolia 搜索的方法，借鉴一下。</p>
+<p>默认的 lunr 搜索的分词效果不好，如需要可以切换成 algolia 。<del>这个是 Todo</del>，lunr 也能用，只是如果你输入一个字或者半个单词，它就会傻掉搜不出结果，它只认词语和完整单词&#x1f605;。</p>
+<p><a href="https://lucas-0.github.io/2020-06-30-hugo-and-loveit/#%E9%85%8D%E7%BD%AE-algolia" target="_blank" rel="noopener noreferrer">这篇文章</a>介绍了在 github action 中配置 algolia 搜索的方法，借鉴一下。</p>
 <ol>
 <li>首先，注册一个 algolia 账号，并创建一个 <code>Index</code>。</li>
 <li>其次，在 <code>overview--&gt;API Keys</code> 中记住三个 Key。</li>
@@ -353,7 +364,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="sd">    atomic-algolia          </span><span class="w">    
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div>关于配置 github actions 自动部署，可以参考我的<a href="https://woodencross.github.io/deploy-website-via-github-actions/" target="_blank" rel="noopener noreffer">这篇文章</a>。</li>
+</div>关于配置 github actions 自动部署，可以参考我的<a href="https://woodencross.github.io/deploy-website-via-github-actions/" target="_blank" rel="noopener noreferrer">这篇文章</a>。</li>
 <li>同时在 <code>config.toml</code> 中设置搜索引擎为 <code>algolia</code> ，并填入 <code>appID</code> <code>index</code> <code>searchKey</code> （不一定必须，未测试）。</li>
 <li>最后 push 你的代码，等待部署完成后就发现搜索变为 “Searched by Algolia” 啦！</li>
 </ol>
@@ -361,7 +372,7 @@
 </ol>
 <h2 id="美化" class="headerLink">
     <a href="#%e7%be%8e%e5%8c%96" class="header-mark"></a>美化</h2><h3 id="favicon" class="headerLink">
-    <a href="#favicon" class="header-mark"></a>favicon</h3><p>使用 <a href="https://realfavicongenerator.net/" target="_blank" rel="noopener noreffer">realfavicongenerator</a> 来生成 favicon ，下载压缩包后放到 <code>/static</code> 目录下即可，这样 hugo 生成后这些图标会在网站根目录下。</p>
+    <a href="#favicon" class="header-mark"></a>favicon</h3><p>使用 <a href="https://realfavicongenerator.net/" target="_blank" rel="noopener noreferrer">realfavicongenerator</a> 来生成 favicon ，下载压缩包后放到 <code>/static</code> 目录下即可，这样 hugo 生成后这些图标会在网站根目录下。</p>
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -374,10 +385,11 @@
     <a href="#header-%e5%ad%97%e4%bd%93" class="header-mark"></a>header 字体</h3><p>LoveIt 主题默认的字体是黑体，整体效果很不错，但是我想让左上角 header 的字体更个性一点。</p>
 <figure><a class="lightgallery" href="./fig1.png" title="./fig1.png" data-thumbnail="./fig1.png" data-sub-html="<h2>就是这个</h2>">
         <img
-            class="lazyload"
-            data-src="./fig1.png"
-            data-srcset="./fig1.png, ./fig1.png 1.5x, ./fig1.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="./fig1.png"
+            srcset="./fig1.png, ./fig1.png 1.5x, ./fig1.png 2x"
+            sizes="auto"
             alt="./fig1.png">
     </a><figcaption class="image-caption">就是这个</figcaption>
     </figure>
@@ -399,15 +411,16 @@
 </div><p>此时再看 header：</p>
 <figure><a class="lightgallery" href="./fig2.png" title="./fig2.png" data-thumbnail="./fig2.png" data-sub-html="<h2>cooler</h2>">
         <img
-            class="lazyload"
-            data-src="./fig2.png"
-            data-srcset="./fig2.png, ./fig2.png 1.5x, ./fig2.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="./fig2.png"
+            srcset="./fig2.png, ./fig2.png 1.5x, ./fig2.png 2x"
+            sizes="auto"
             alt="./fig2.png">
     </a><figcaption class="image-caption">cooler</figcaption>
     </figure>
-<p>🆒👍</p>
-<p>同时你也可以使用 <a href="https://fonts.google.com/" target="_blank" rel="noopener noreffer">google fonts</a> 的 API 来引入字体，比如在 <code>assets/css/_override.scss</code> 中：</p>
+<p>&#x1f192;&#x1f44d;</p>
+<p>同时你也可以使用 <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">google fonts</a> 的 API 来引入字体，比如在 <code>assets/css/_override.scss</code> 中：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -423,10 +436,11 @@
 </div><p>显示效果为：</p>
 <figure><a class="lightgallery" href="./fig3.png" title="./fig3.png" data-thumbnail="./fig3.png" data-sub-html="<h2>also cooler</h2>">
         <img
-            class="lazyload"
-            data-src="./fig3.png"
-            data-srcset="./fig3.png, ./fig3.png 1.5x, ./fig3.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="./fig3.png"
+            srcset="./fig3.png, ./fig3.png 1.5x, ./fig3.png 2x"
+            sizes="auto"
             alt="./fig3.png">
     </a><figcaption class="image-caption">also cooler</figcaption>
     </figure>
@@ -493,9 +507,7 @@
         <div class="post-info-line">
             <div class="post-info-md"><span><a class="link-to-mardown" href=/change-theme-from-papermod-to-loveit/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
-            <div class="post-info-share">
-                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-hashtags="Hugo,LoveIt,Waline,Algolia"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><i class="fab fa-evernote fa-fw"></i></a></span>
-            </div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-hashtags="Hugo,LoveIt,Waline,Algolia"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-hashtag="Hugo"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-web><span class="fab fa-whatsapp fa-fw"></span></button><button title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><span data-svg-src="/lib/simple-icons/icons/line.min.svg"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><span data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></span></button><button title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt" data-description=""><span class="fab fa-blogger fa-fw"></span></button><button title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/change-theme-from-papermod-to-loveit/" data-title="切换主题——从PaperMod到LoveIt"><span class="fab fa-evernote fa-fw"></span></button></div>
         </div>
     </div>
 
@@ -514,8 +526,8 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.97.3">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.120.4">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp">浙ICP备2022009921号</span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
@@ -527,10 +539,8 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
-
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo4myblog.vercel.app","lang":"zh-cn"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"ICWETR37BB","algoliaIndex":"search4myblog","algoliaSearchKey":"269392727bc9819a6112575098d99b30","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo4myblog.vercel.app","lang":"zh-cn"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"ICWETR37BB","algoliaIndex":"search4myblog","algoliaSearchKey":"269392727bc9819a6112575098d99b30","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script></div>
 </body>
 
 </html>
