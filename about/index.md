@@ -5,9 +5,20 @@
 
 - Woodencross，某些语境中等价于 QC，一名普通人（目前）。
 
-- 计划周更博客，给自己一个 deadline 可能更有动力。
+- ~~计划周更博客，给自己一个 deadline 可能更有动力。~~
 
 ## 关于本站
+
+| 功能 | 名称 |
+|:---:|:---:|
+| 写作 | vscode + markdown |
+| 图床 | 七牛云 + vs-picgo |
+| 发布 | github actions + github pages|
+| 建站 | hugo |
+| 主题 | DoIt |
+| 评论 | twikoo |
+
+---
 
 | Time | Event |
 |:---:|:---:|
