@@ -188,11 +188,11 @@ Push到网站上后才发现Disqus在国内被墙了，还是换一个吧……�
 效果如下：
 
 <!-- {{< image src="./Gitalk亮.png" caption="亮色" width=60% >}} -->
-{{< image src="http://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-19-48.png" caption="亮色" >}}
+{{< image src="https://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-19-48.png" caption="亮色" >}}
 
 与主题契合的挺好！美中不足的就是在暗色模式下评论依旧是亮色，有些违和：
 
-{{< image src="http://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-41-01.png" caption="暗色" >}}
+{{< image src="https://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-41-01.png" caption="暗色" >}}
 <!-- {{< image src="./Gitalk暗.png" caption="暗色" width=60% >}} -->
 
 只能说还是不够好呀。
@@ -216,7 +216,7 @@ Push到网站上后才发现Disqus在国内被墙了，还是换一个吧……�
 ```
 但是在网站暗色模式下依旧是亮色
 
-{{< image src="http://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-41-52.png" caption="依旧是亮色" >}}
+{{< image src="https://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-41-52.png" caption="依旧是亮色" >}}
 <!-- {{< image src="./Waline亮.png" caption="依旧是亮色" width=60% >}} -->
 
 于是来看手册：
@@ -237,10 +237,10 @@ dark: 'auto'
 
 在`<body>`上添加？依照我贫瘠的html知识的指引，我打开了f12开发者模式，并尝试切换主题：
 
-{{< image src="http://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-42-50.png" caption="亮色主题" >}}
+{{< image src="https://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-42-50.png" caption="亮色主题" >}}
 <!-- {{< image src="./body亮.png" caption="亮色主题" width=60% >}} -->
 
-{{< image src="http://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-43-42.png" caption="暗色主题" >}}
+{{< image src="https://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-43-42.png" caption="暗色主题" >}}
 <!-- {{< image src="./body暗.png" caption="暗色主题" width=60% >}} -->
 
 我超，还真有。于是添加
@@ -248,7 +248,7 @@ dark: 'auto'
 dark: 'body.dark'
 ```
 
-{{< image src="http://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-44-21.png" caption="终于暗了" >}}
+{{< image src="https://img.woodencross.cn/blog/个人博客小站建设记录-2023-11-20-12-44-21.png" caption="终于暗了" >}}
 <!-- {{< image src="./Waline暗.png" caption="终于暗了" width=60% >}} -->
 
 大功告成！心里终于舒坦了~而且Waline还支持表情，感觉挺不赖，就先用着它了。
