@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>折腾自动化部署 - Woodencross&#39;s Cyber Home</title><meta name="Description" content="真是一个充实的下午。"><meta property="og:title" content="折腾自动化部署" />
+<meta property="og:description" content="真是一个充实的下午。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" /><meta property="og:image" content="https://woodencross.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-22T18:43:49+08:00" />
+<meta property="article:modified_time" content="2023-11-20T05:10:13+00:00" /><meta property="og:site_name" content="Woodencross&#39;s Cyber Home" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://woodencross.github.io/logo.png"/>
+
+<meta name="twitter:title" content="折腾自动化部署"/>
+<meta name="twitter:description" content="真是一个充实的下午。"/>
+<meta name="application-name" content="Woodencross&#39;s">
+<meta name="apple-mobile-web-app-title" content="Woodencross&#39;s">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" /><link rel="prev" href="https://woodencross.github.io/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B0%8F%E7%AB%99%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" /><link rel="next" href="https://woodencross.github.io/%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0post_meta%E4%BF%A1%E6%81%AF/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "折腾自动化部署",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/woodencross.github.io\/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2\/"
+        },"genre": "posts","keywords": "Github Actions, Github Pages","wordcount":  1685 ,
+        "url": "https:\/\/woodencross.github.io\/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2\/","datePublished": "2021-12-22T18:43:49+08:00","dateModified": "2023-11-20T05:10:13+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Woodencross"
+            },"description": "真是一个充实的下午。"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Woodencross&#39;s Cyber Home"><span class="header-title-pre"><i class='fas fa-feather-alt'></i></span>Woodencross&#39;s</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-book-open'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fas fa-boxes'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fas fa-question'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Woodencross&#39;s Cyber Home"><span class="header-title-pre"><i class='fas fa-feather-alt'></i></span>Woodencross&#39;s</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-boxes'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#起因">起因</a></li>
+    <li><a href="#过程">过程</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">折腾自动化部署</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">Woodencross</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%B0%8F%E7%AB%99%E7%BA%AA%E5%BF%B5%E5%A2%99/"><i class="far fa-folder fa-fw"></i>小站纪念墙</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-22">2021-12-22</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-11-20">2023-11-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1685 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" class="leancloud_visitors" data-flag-title="折腾自动化部署">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id="twikoo_visitors"></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" class="comment_count" data-flag-title="折腾自动化部署">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        
+        loading="eager"
+        src="./efishenci.png"
+        srcset="./efishenci.png, ./efishenci.png 1.5x, ./efishenci.png 2x"
+        sizes="auto"
+        alt="真是一个充实的下午。"
+        title="真是一个充实的下午。" height="auto"   width="auto" ></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#起因">起因</a></li>
+    <li><a href="#过程">过程</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="起因" class="headerLink">
+    <a href="#%e8%b5%b7%e5%9b%a0" class="header-mark"></a>起因</h2><p>最初部署博客是在本地直接编译框架源码，然后把编译后的静态网页文件上传到Github Pages仓库。可是同时我又想管理框架源码，如果源码和静态网页托管到一个仓库的话，那么仓库的可见性又成了问题：Private的话网页不能互联网公开可见，Public的话源码又暴露了。试了一下分别本地管理两个仓库，可是这样每次都要commit两遍push两遍，怪麻烦的。于是秉承程序员“花六个小时写一个自动化脚本，做一个动手五分钟就能搞定的任务”的黄金精神，我又开始折腾Github Actions自动部署啦。</p>
+<!--<figure><img src="/images/memes/efishenci.png" width="50%"/>
+</figure>
+-->
+<h2 id="过程" class="headerLink">
+    <a href="#%e8%bf%87%e7%a8%8b" class="header-mark"></a>过程</h2><p>官方（也许？）手册在此：<a href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener noreferrer">GitHub Actions for Hugo GitHub Pages</a></p>
+<p>Github通过检测仓库根目录下的<code>/.github/workflows/*.yaml</code>来执行Actions。因此需要新建一个<code>.yaml</code>文件，取名随意，之后复制手册里的默认配置并修改。折腾一下午后我的配置文件如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="hl"><span class="lnt"> 6
+</span></span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="hl"><span class="lnt">31
+</span></span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">GitHub Pages </span><span class="w"> </span><span class="c"># 为action取个名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="c"># 设定当仓库收到push后执行action</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">   </span><span class="c"># 设定触发action的分支</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span>- <span class="l">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># pull_request:   # 我不需要pr后执行action，所以注释掉</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-20.04  </span><span class="w"> </span><span class="c"># 设定action的执行环境</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">concurrency</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.workflow }}-${{ github.ref }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">  </span><span class="c"># 需要执行的步骤</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2  </span><span class="w"> </span><span class="c"># 使用现成的action库</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">   </span><span class="c"># 设定执行的环境变量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;latest&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo  </span><span class="w"> </span><span class="c"># 直接执行的指令</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.ref == &#39;refs/heads/master&#39; }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">deploy_key</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GH_PAGES }}  </span><span class="w"> </span><span class="c"># 改成自己deploy key的名字</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">external_repository</span><span class="p">:</span><span class="w"> </span><span class="l">Woodencross/Woodencross.github.io   </span><span class="w"> </span><span class="c"># public库的地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">master   </span><span class="w"> </span><span class="c"># 要推送到public库的分支</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public    </span><span class="w"> </span><span class="c"># 与源码的publishDir保持一致</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.event.head_commit.message }}  </span><span class="w"> </span><span class="c"># 同步commit message</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里涉及到<code>deploy key</code>，这是什么呢？由于我的源码与action都在私有库里，静态网页在公开库里，而action自动部署的时候需要从私有库push到公开库，那么就需要一个像ssh key的东西（实际上就是ssh）来验证push者的身份。Github提供了三种验证方式，分别是<code>github_token</code> <code>deploy_key</code>与<code>personal_token</code>，其中只有<code>deploy_key</code>基于ssh，另两个都是基于https，那我自然选择最安全（理论上）的啦。</p>
+<p>通过</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&#34;</span><span class="k">$(</span>git config user.email<span class="k">)</span><span class="s2">&#34;</span> -f gh-pages -N <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># You will get 2 files:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   gh-pages.pub (public key)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   gh-pages     (private key)</span>
+</span></span></code></pre></div><p>生成公钥私钥文件，将公钥加入<strong>公开库</strong>的<code>Settings-&gt;Deploy keys</code>中（随便取个名字），将私钥加入<strong>私有库</strong>的<code>Settings-&gt;Secrets</code>中，注意这个的取名要和<code>.yaml</code>文件中的一致，这样私有库就能通过身份验证向公开库push内容了。当在源码中更新好内容后，只需要向私有库push，剩下的编译部署交给Github Actions来完成！</p>
+<p>当然纸面总结上看起来是很轻松的工作，但是实操起来踩的坑可不少，不然怎么花了一个下午？</p>
+<p>一个是submodule的问题。因为我之前的主题模板是直接<code>git clone</code>到源码里的，这就导致action执行时报错说“找不到<code>.gitmodules</code>”，应该是使用的action库默认大家的模板都是submodule吧。但是submodule这个东西实在是不好管理，老是搞得我重建仓库，而我自己又不会写action库，所以就还是<del>勉为其难地</del>用<code>git submodule add</code>来添加模板了。</p>
+<p>PS：好像在一些情况下不能用<code>git submodule add</code>而要用<code>git submodule--helper add</code>。</p>
+<p>二是Github分支问题，我的仓库都是默认的<code>master</code>，而文档里copy来的分支默认是<code>main</code>，有一处在第六行（高亮）很明显也是直接改了，但还有一处在第31行（高亮）……这个是真的很难注意到好吧。听朋友说Github主分支由master改叫main是黑命贵的产物，因为master有奴隶主的意思&#x1f605;。真是差不多得了嗷。</p>
+<p>三是愚蠢的typo，<code>.github/workflows</code>少了个<strong>s</strong>！！我还寻思push之后Github action怎么不工作，一度以为是为了防挖矿设置了每小时最大工作次数。</p>
+<h2 id="结语" class="headerLink">
+    <a href="#%e7%bb%93%e8%af%ad" class="header-mark"></a>结语</h2><p>总而言之，网站的源码保护和自动化部署在经历了一个下午的折腾后也算是完美收官。我的评价是：值！（甚至老想手痒多提交几次欣赏成果~）</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-11-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署" data-hashtags="Github Actions,Github Pages"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-hashtag="Github Actions"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署" data-web><span class="fab fa-whatsapp fa-fw"></span></button><button title="分享到 Line" data-sharer="line" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署"><span data-svg-src="/lib/simple-icons/icons/line.min.svg"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署" data-image="./efishenci.png"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署" data-description="真是一个充实的下午。"><span data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></span></button><button title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署" data-description="真是一个充实的下午。"><span class="fab fa-blogger fa-fw"></span></button><button title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" data-title="折腾自动化部署"><span class="fab fa-evernote fa-fw"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/github-actions/">Github Actions</a>,&nbsp;<a href="/tags/github-pages/">Github Pages</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B0%8F%E7%AB%99%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" class="prev" rel="prev" title="个人博客小站建设记录"><i class="fas fa-angle-left fa-fw"></i>个人博客小站建设记录</a>
+            <a href="/%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0post_meta%E4%BF%A1%E6%81%AF/" class="next" rel="next" title="修改文章post_meta信息">修改文章post_meta信息<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.120.4">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">浙ICP备2022009921号</span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo4myblog.vercel.app","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script></div>
+</body>
+
+</html>

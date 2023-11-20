@@ -4,11 +4,11 @@
         <link>https://woodencross.github.io/tags/</link>
         <description>Tags - 标签 - Woodencross&#39;s Cyber Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 20:25:26 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>原神</title>
-    <link>https://woodencross.github.io/tags/%E5%8E%9F%E7%A5%9E/</link>
+    <title>Genshin</title>
+    <link>https://woodencross.github.io/tags/genshin/</link>
     <pubDate>Fri, 15 Apr 2022 20:25:26 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/%E5%8E%9F%E7%A5%9E/</guid>
+    </author><guid>https://woodencross.github.io/tags/genshin/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Algolia</title>
@@ -60,18 +60,18 @@
     </author><guid>https://woodencross.github.io/tags/ubuntu/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>Github</title>
-    <link>https://woodencross.github.io/tags/github/</link>
-    <pubDate>Wed, 22 Dec 2021 18:43:49 &#43;0800</pubDate><author>
+    <title>PapaeMod</title>
+    <link>https://woodencross.github.io/tags/papaemod/</link>
+    <pubDate>Tue, 22 Mar 2022 15:37:58 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/github/</guid>
+    </author><guid>https://woodencross.github.io/tags/papaemod/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>Disqus</title>
-    <link>https://woodencross.github.io/tags/disqus/</link>
-    <pubDate>Tue, 21 Dec 2021 23:13:20 &#43;0800</pubDate><author>
+    <title>PaperMod</title>
+    <link>https://woodencross.github.io/tags/papermod/</link>
+    <pubDate>Mon, 21 Mar 2022 21:53:51 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/disqus/</guid>
+    </author><guid>https://woodencross.github.io/tags/papermod/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

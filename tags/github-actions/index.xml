@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Github Actions - 标签 - Woodencross&#39;s Cyber Home</title>
+        <link>https://woodencross.github.io/tags/github-actions/</link>
+        <description>Github Actions - 标签 - Woodencross&#39;s Cyber Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 22 Dec 2021 18:43:49 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/tags/github-actions/" rel="self" type="application/rss+xml" /><item>
+    <title>折腾自动化部署</title>
+    <link>https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
+    <pubDate>Wed, 22 Dec 2021 18:43:49 &#43;0800</pubDate><author>
+        <name>Woodencross</name>
+    </author><guid>https://woodencross.github.io/%E6%8A%98%E8%85%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/deploy-website-via-github-actions/efishenci.png" referrerpolicy="no-referrer">
+            </div>真是一个充实的下午。]]></description>
+</item></channel>
+</rss>
