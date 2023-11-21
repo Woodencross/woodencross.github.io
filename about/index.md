@@ -14,6 +14,7 @@
 | 写作 | vscode + markdown |
 | 图床 | 七牛云 + vs-picgo |
 | 发布 | github actions + github pages|
+| CDN | 阿里云 |
 | 建站 | hugo |
 | 主题 | DoIt |
 | 评论 | twikoo |

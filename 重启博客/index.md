@@ -25,6 +25,7 @@
 | 写作 | vscode + markdown |
 | 图床 | 七牛云 + vs-picgo |
 | 发布 | github actions + github pages|
+| CDN | 阿里云 |
 | 建站 | hugo |
 | 主题 | DoIt |
 | 评论 | twikoo |
@@ -56,6 +57,16 @@
   run: echo "woodencross.cn" > ./public/CNAME
 ...
 ```
+
+### CDN
+
+github.io访问速度还是太慢了，需要CDN加速。cloudflare的SSL证书好像有问题，浏览器提醒网址不安全，最终还是用了阿里云的CDN，毕竟域名也是阿里云买的，方便一些，配置就按照指引就好。希望不会花很多钱。
+
+### 评论
+
+twikoo部署在vercel上，国内vercel被墙基本无法访问。这次重启给vercel项目分配了一个我的二级域名，应该是可以访问了。另外，github commit触发vercel自动部署之后需要将分支promote to production，否则生产环境部署的还是之前的代码。
+
+{{< image src="https://img.woodencross.cn/blog/重启博客-2023-11-21-16-39-58.png" caption="promote to production" >}}
 
 ## 其三
 
