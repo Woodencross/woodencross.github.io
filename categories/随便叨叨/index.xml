@@ -1,21 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>随便叨叨 - 分类 - Woodencross&#39;s Cyber Home</title>
-        <link>https://woodencross.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%8F%A8%E5%8F%A8/</link>
+        <link>https://woodencross.cn/categories/%E9%9A%8F%E4%BE%BF%E5%8F%A8%E5%8F%A8/</link>
         <description>随便叨叨 - 分类 - Woodencross&#39;s Cyber Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 Nov 2023 21:33:45 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%8F%A8%E5%8F%A8/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 Nov 2023 21:33:45 &#43;0800</lastBuildDate><atom:link href="https://woodencross.cn/categories/%E9%9A%8F%E4%BE%BF%E5%8F%A8%E5%8F%A8/" rel="self" type="application/rss+xml" /><item>
     <title>测试用博客</title>
-    <link>https://woodencross.github.io/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://woodencross.cn/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%8D%9A%E5%AE%A2/</link>
     <pubDate>Sun, 19 Nov 2023 21:33:45 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%8D%9A%E5%AE%A2/</guid>
+    </author><guid>https://woodencross.cn/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%8D%9A%E5%AE%A2/</guid>
     <description><![CDATA[测试各种功能用]]></description>
 </item><item>
     <title>第一篇博客？</title>
-    <link>https://woodencross.github.io/my-first-post/</link>
+    <link>https://woodencross.cn/my-first-post/</link>
     <pubDate>Tue, 21 Dec 2021 22:18:57 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/my-first-post/</guid>
+    </author><guid>https://woodencross.cn/my-first-post/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://s4.ax1x.com/2021/12/21/TQPAPg.jpg" referrerpolicy="no-referrer">
             </div>第一篇博客！记录学习、生活以及任何一切。]]></description>

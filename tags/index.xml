@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - Woodencross&#39;s Cyber Home</title>
-        <link>https://woodencross.github.io/tags/</link>
+        <link>https://woodencross.cn/tags/</link>
         <description>Tags - 标签 - Woodencross&#39;s Cyber Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 20:25:26 &#43;0800</lastBuildDate><atom:link href="https://woodencross.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 20:25:26 &#43;0800</lastBuildDate><atom:link href="https://woodencross.cn/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Genshin</title>
-    <link>https://woodencross.github.io/tags/genshin/</link>
+    <link>https://woodencross.cn/tags/genshin/</link>
     <pubDate>Fri, 15 Apr 2022 20:25:26 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/genshin/</guid>
+    </author><guid>https://woodencross.cn/tags/genshin/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Algolia</title>
-    <link>https://woodencross.github.io/tags/algolia/</link>
+    <link>https://woodencross.cn/tags/algolia/</link>
     <pubDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/algolia/</guid>
+    </author><guid>https://woodencross.cn/tags/algolia/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Hugo</title>
-    <link>https://woodencross.github.io/tags/hugo/</link>
+    <link>https://woodencross.cn/tags/hugo/</link>
     <pubDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/hugo/</guid>
+    </author><guid>https://woodencross.cn/tags/hugo/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>LoveIt</title>
-    <link>https://woodencross.github.io/tags/loveit/</link>
+    <link>https://woodencross.cn/tags/loveit/</link>
     <pubDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/loveit/</guid>
+    </author><guid>https://woodencross.cn/tags/loveit/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Waline</title>
-    <link>https://woodencross.github.io/tags/waline/</link>
+    <link>https://woodencross.cn/tags/waline/</link>
     <pubDate>Wed, 30 Mar 2022 16:51:48 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/waline/</guid>
+    </author><guid>https://woodencross.cn/tags/waline/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>图床</title>
-    <link>https://woodencross.github.io/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <link>https://woodencross.cn/tags/%E5%9B%BE%E5%BA%8A/</link>
     <pubDate>Tue, 29 Mar 2022 14:02:02 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/%E5%9B%BE%E5%BA%8A/</guid>
+    </author><guid>https://woodencross.cn/tags/%E5%9B%BE%E5%BA%8A/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Linux</title>
-    <link>https://woodencross.github.io/tags/linux/</link>
+    <link>https://woodencross.cn/tags/linux/</link>
     <pubDate>Fri, 25 Mar 2022 14:25:37 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/linux/</guid>
+    </author><guid>https://woodencross.cn/tags/linux/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Ubuntu</title>
-    <link>https://woodencross.github.io/tags/ubuntu/</link>
+    <link>https://woodencross.cn/tags/ubuntu/</link>
     <pubDate>Fri, 25 Mar 2022 14:25:37 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/ubuntu/</guid>
+    </author><guid>https://woodencross.cn/tags/ubuntu/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>PapaeMod</title>
-    <link>https://woodencross.github.io/tags/papaemod/</link>
+    <link>https://woodencross.cn/tags/papaemod/</link>
     <pubDate>Tue, 22 Mar 2022 15:37:58 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/papaemod/</guid>
+    </author><guid>https://woodencross.cn/tags/papaemod/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>PaperMod</title>
-    <link>https://woodencross.github.io/tags/papermod/</link>
+    <link>https://woodencross.cn/tags/papermod/</link>
     <pubDate>Mon, 21 Mar 2022 21:53:51 &#43;0800</pubDate><author>
         <name>Woodencross</name>
-    </author><guid>https://woodencross.github.io/tags/papermod/</guid>
+    </author><guid>https://woodencross.cn/tags/papermod/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
