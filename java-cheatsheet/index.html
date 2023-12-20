@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Java Cheatsheet - Woodencross&#39;s Cyber Home</title><meta name="Description" content="一些Java刷题时的知识库记录"><meta property="og:title" content="Java Cheatsheet" />
+<meta property="og:description" content="一些Java刷题时的知识库记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://woodencross.cn/java-cheatsheet/" /><meta property="og:image" content="https://woodencross.cn/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-14T22:38:42+08:00" />
+<meta property="article:modified_time" content="2023-12-20T17:15:50+08:00" /><meta property="og:site_name" content="Woodencross&#39;s Cyber Home" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://woodencross.cn/logo.png" /><meta name="twitter:title" content="Java Cheatsheet"/>
+<meta name="twitter:description" content="一些Java刷题时的知识库记录"/>
+<meta name="application-name" content="Woodencross&#39;s">
+<meta name="apple-mobile-web-app-title" content="Woodencross&#39;s">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://woodencross.cn/java-cheatsheet/" /><link rel="prev" href="https://woodencross.cn/%E5%B0%8F%E5%B2%9B%E5%BF%AB%E9%97%AA%E5%BA%97%E8%A7%81%E9%97%BB/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Java Cheatsheet",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/woodencross.cn\/java-cheatsheet\/"
+        },"genre": "posts","keywords": "Java","wordcount":  630 ,
+        "url": "https:\/\/woodencross.cn\/java-cheatsheet\/","datePublished": "2023-12-14T22:38:42+08:00","dateModified": "2023-12-20T17:15:50+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Woodencross"
+            },"description": "一些Java刷题时的知识库记录"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Woodencross&#39;s Cyber Home"><span class="header-title-pre"><i class='fas fa-feather-alt'></i></span>Woodencross&#39;s</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-book-open'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fas fa-boxes'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fas fa-question'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Woodencross&#39;s Cyber Home"><span class="header-title-pre"><i class='fas fa-feather-alt'></i></span>Woodencross&#39;s</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-boxes'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#常用方法import">常用方法import</a></li>
+    <li><a href="#输入">输入</a></li>
+    <li><a href="#输出">输出</a></li>
+    <li><a href="#排序">排序</a></li>
+    <li><a href="#集合">集合</a>
+      <ul>
+        <li><a href="#arraylist">ArrayList</a></li>
+        <li><a href="#linkedlist">LinkedList</a></li>
+        <li><a href="#hashset">HashSet</a></li>
+        <li><a href="#hashmap">HashMap</a></li>
+      </ul>
+    </li>
+    <li><a href="#string--stringbuilder">String &amp; StringBuilder</a></li>
+    <li><a href="#math">Math</a></li>
+    <li><a href="#正则">正则</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java Cheatsheet</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">Woodencross</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E4%B9%A6%E9%A6%86/"><i class="far fa-folder fa-fw"></i>知识图书馆</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-12-14">2023-12-14</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-12-20">2023-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 630 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/java-cheatsheet/" class="leancloud_visitors" data-flag-title="Java Cheatsheet">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id="twikoo_visitors"></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/java-cheatsheet/" class="comment_count" data-flag-title="Java Cheatsheet">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#常用方法import">常用方法import</a></li>
+    <li><a href="#输入">输入</a></li>
+    <li><a href="#输出">输出</a></li>
+    <li><a href="#排序">排序</a></li>
+    <li><a href="#集合">集合</a>
+      <ul>
+        <li><a href="#arraylist">ArrayList</a></li>
+        <li><a href="#linkedlist">LinkedList</a></li>
+        <li><a href="#hashset">HashSet</a></li>
+        <li><a href="#hashmap">HashMap</a></li>
+      </ul>
+    </li>
+    <li><a href="#string--stringbuilder">String &amp; StringBuilder</a></li>
+    <li><a href="#math">Math</a></li>
+    <li><a href="#正则">正则</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="常用方法import" class="headerLink">
+    <a href="#%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95import" class="header-mark"></a>常用方法import</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.*</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="输入" class="headerLink">
+    <a href="#%e8%be%93%e5%85%a5" class="header-mark"></a>输入</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">next</span><span class="p">();</span><span class="w"> </span><span class="c1">//String 以空格结束</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">//String 以回车结束</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"> </span><span class="c1">//int</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span><span class="w"> </span><span class="c1">//float</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span><span class="w"> </span><span class="c1">//double</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">hasNext</span><span class="p">();</span><span class="w"> </span><span class="c1">//boolean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">hasNextInt</span><span class="p">();</span><span class="w"> </span><span class="c1">//boolean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">in</span><span class="p">.</span><span class="na">hasNextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">//boolean</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="输出" class="headerLink">
+    <a href="#%e8%be%93%e5%87%ba" class="header-mark"></a>输出</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">//字符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">10</span><span class="p">);</span><span class="w"> </span><span class="c1">//十进制</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;%.2f&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">.</span><span class="na">1415</span><span class="p">);</span><span class="w"> </span><span class="c1">//保留两位小数</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="排序" class="headerLink">
+    <a href="#%e6%8e%92%e5%ba%8f" class="header-mark"></a>排序</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="c1">//{1, 2, 3}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">);</span><span class="w"> </span><span class="c1">//对下标0-2排序</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">//返回值大于0交换</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">});</span><span class="w"> </span><span class="c1">//{3, 2, 1}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">3</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">Compatator</span><span class="p">.</span><span class="na">naturalOrder</span><span class="p">());</span><span class="w"> </span><span class="c1">//升序</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">Comparator</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span><span class="w"> </span><span class="c1">//降序</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="集合" class="headerLink">
+    <a href="#%e9%9b%86%e5%90%88" class="header-mark"></a>集合</h2><h3 id="arraylist" class="headerLink">
+    <a href="#arraylist" class="header-mark"></a>ArrayList</h3><h3 id="linkedlist" class="headerLink">
+    <a href="#linkedlist" class="header-mark"></a>LinkedList</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ll</span><span class="p">.</span><span class="na">addFirst</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ll</span><span class="p">.</span><span class="na">addLast</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ll</span><span class="p">.</span><span class="na">removeFirst</span><span class="p">();</span><span class="w"> </span><span class="c1">//int</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ll</span><span class="p">.</span><span class="na">removeLast</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ll</span><span class="p">.</span><span class="na">getFirst</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ll</span><span class="p">.</span><span class="na">getLast</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hashset" class="headerLink">
+    <a href="#hashset" class="header-mark"></a>HashSet</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hs</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hs</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//boolean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hs</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hs</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hs</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hashmap" class="headerLink">
+    <a href="#hashmap" class="header-mark"></a>HashMap</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hm</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;A&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hm</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//A</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hm</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hm</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hm</span><span class="p">.</span><span class="na">containsValue</span><span class="p">(</span><span class="s">&#34;A&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">hm</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">hm</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{};</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="string--stringbuilder" class="headerLink">
+    <a href="#string--stringbuilder" class="header-mark"></a>String &amp; StringBuilder</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello world!&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">str</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"> </span><span class="c1">//char[]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">str</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">0</span><span class="p">);</span><span class="w"> </span><span class="c1">//char</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">str</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span><span class="w"> </span><span class="c1">//删除头尾空格</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">str</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&#34;\\s+&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">//删除空格</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">str</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="s">&#34;ABC&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">//比较字典序</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;Hello world&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">delete</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//左闭右开</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">deleteCharAt</span><span class="p">(</span><span class="n">0</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&#34;world&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">//子串第一次出现的索引</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">&#34;world&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 子串最后一次出现的索引</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;abc&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;abc&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span><span class="w"> </span><span class="c1">//逆序</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">subString</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">);</span><span class="w"> </span><span class="c1">//String</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">//String</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="math" class="headerLink">
+    <a href="#math" class="header-mark"></a>Math</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">);</span><span class="w"> </span><span class="c1">//2^3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">9</span><span class="p">);</span><span class="w"> </span><span class="c1">//开方</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="o">-</span><span class="n">2</span><span class="p">);</span><span class="w"> </span><span class="c1">//绝对值</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">3</span><span class="p">.</span><span class="na">14</span><span class="p">);</span><span class="w"> </span><span class="c1">//四舍五入</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="正则" class="headerLink">
+    <a href="#%e6%ad%a3%e5%88%99" class="header-mark"></a>正则</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//java中&#34;\\&#34;表示&#34;\&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="w">       </span><span class="c1">//指定字符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="w">       </span><span class="c1">//任意字符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="n">d</span><span class="w">     </span><span class="c1">//任意数字，等价[0-9]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="n">w</span><span class="w">     </span><span class="c1">//任意数字大小写字母下划线，等价[0-9a-zA-Z_]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="n">s</span><span class="w">     </span><span class="c1">//空格，tab</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="n">D</span><span class="w">     </span><span class="c1">//非\\d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="n">W</span><span class="w">     </span><span class="c1">//非\\w</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="n">S</span><span class="w">     </span><span class="c1">//非\\s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="o">*</span><span class="w">      </span><span class="c1">//任意个数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="o">+</span><span class="w">      </span><span class="c1">//至少一个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="o">?</span><span class="w">      </span><span class="c1">//零或一个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="p">{</span><span class="n">3</span><span class="p">}</span><span class="w">    </span><span class="c1">//指定个数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="p">{</span><span class="n">2</span><span class="p">,</span><span class="n">3</span><span class="p">}</span><span class="w">  </span><span class="c1">//指定范围个数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="p">{</span><span class="n">2</span><span class="p">,}</span><span class="w">   </span><span class="c1">//最少n个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="p">{</span><span class="n">0</span><span class="p">,</span><span class="n">3</span><span class="p">}</span><span class="w">  </span><span class="c1">//最多n个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">^</span><span class="n">A</span><span class="w">      </span><span class="c1">//匹配开头</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A$</span><span class="w">      </span><span class="c1">//匹配结尾</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">[</span><span class="n">ABC</span><span class="o">]</span><span class="w">   </span><span class="c1">//[]内任意字符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">[^</span><span class="n">ABC</span><span class="o">]</span><span class="w">  </span><span class="c1">//非[]内任意字符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">A</span><span class="o">|</span><span class="n">B</span><span class="o">|</span><span class="n">C</span><span class="w">   </span><span class="c1">//或</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">?</span><span class="w">       </span><span class="c1">//非贪婪匹配</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-12-20&nbsp;<a class="git-hash" href="https://github.com/Woodencross/Woodencross.github.io/commit/6320dea47de68e8a594f27957e360c8cd6b682e7" target="_blank" title="commit by qichong(qichong@yoga13s.com) 6320dea47de68e8a594f27957e360c8cd6b682e7: 📃 docs(posts): 新增文章" rel="noopener noreferrer">
+                                    <i class="fas fa-hashtag fa-fw"></i>6320dea</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/java-cheatsheet/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet" data-hashtags="Java"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://woodencross.cn/java-cheatsheet/" data-hashtag="Java"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet" data-web><span class="fab fa-whatsapp fa-fw"></span></button><button title="分享到 Line" data-sharer="line" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet"><span data-svg-src="/lib/simple-icons/icons/line.min.svg"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 Myspace" data-sharer="myspace" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet" data-description="一些Java刷题时的知识库记录"><span data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></span></button><button title="分享到 Blogger" data-sharer="blogger" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet" data-description="一些Java刷题时的知识库记录"><span class="fab fa-blogger fa-fw"></span></button><button title="分享到 Evernote" data-sharer="evernote" data-url="https://woodencross.cn/java-cheatsheet/" data-title="Java Cheatsheet"><span class="fab fa-evernote fa-fw"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%B0%8F%E5%B2%9B%E5%BF%AB%E9%97%AA%E5%BA%97%E8%A7%81%E9%97%BB/" class="prev" rel="prev" title="小岛快闪店见闻"><i class="fas fa-angle-left fa-fw"></i>小岛快闪店见闻</a></div>
+</div>
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.121.1">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Woodencross</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">浙ICP备2022009921号</span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.woodencross.cn","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="/lib/twikoo/twikoo.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script></div>
+</body>
+
+</html>
